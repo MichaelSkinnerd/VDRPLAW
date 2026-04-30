@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vice District Penal Code Lookup</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3ead7;
+      color: #111827;
+    }
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e293b 55%, #7f1d1d);
+      color: #f8fafc;
+      padding: 28px 20px;
+      border-bottom: 5px solid #7f1d1d;
+    }
+    .header-wrap {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+    }
+    .seal {
+      width: 86px;
+      height: 86px;
+      border: 3px solid #f8fafc;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-weight: bold;
+      font-size: 12px;
+      background: #111827;
+      box-shadow: 0 0 25px rgba(127, 29, 29, 0.6);
+    }
+    h1 { margin: 0; font-size: 34px; letter-spacing: 1px; }
+    .subtitle { margin-top: 6px; color: #cbd5e1; }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 22px;
+    }
+    .memo-bar {
+      background: #fffaf0;
+      border: 1px solid #d6c7aa;
+      border-left: 6px solid #7f1d1d;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #b8a98d;
+      background: #fffdf7;
+      color: #111827;
+      font-size: 15px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .stat-card {
+      background: #111827;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 14px;
+      border-top: 4px solid #7f1d1d;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+    }
+    .stat-card span {
+      display: block;
+      font-size: 26px;
+      color: #fbbf24;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+    .section-title {
+      margin: 26px 0 10px;
+      color: #7f1d1d;
+      border-bottom: 2px solid #7f1d1d;
+      padding-bottom: 6px;
+      font-size: 22px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+      gap: 14px;
+    }
+    .charge-card {
+      background: #fffaf0;
+      border: 1px solid #d6c7aa;
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 8px 22px rgba(15, 23, 42, 0.08);
+    }
+    .charge-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+    .code {
+      background: #111827;
+      color: #f8fafc;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .charge-name {
+      font-weight: bold;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+    .meta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .meta-box {
+      background: #f5ecd9;
+      border: 1px solid #dfcfb0;
+      border-radius: 8px;
+      padding: 9px;
+      font-size: 13px;
+    }
+    .meta-box strong {
+      display: block;
+      color: #7f1d1d;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      margin-bottom: 3px;
+    }
+    .cap {
+      margin-top: 8px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .no-results {
+      padding: 24px;
+      background: #fffaf0;
+      border: 1px solid #d6c7aa;
+      border-radius: 10px;
+      text-align: center;
+      color: #7f1d1d;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+      padding: 24px;
+    }
+    @media (max-width: 760px) {
+      .header-wrap, .filters, .stats { grid-template-columns: 1fr; display: grid; }
+      h1 { font-size: 26px; }
+      .seal { width: 72px; height: 72px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-wrap">
+      <div>
+        <h1>Vice District Penal Code Lookup</h1>
+        <div class="subtitle">Public law reference for city charges, fines, jail time, and aggravating penalties.</div>
+      </div>
+      <div class="seal">VICE<br>DISTRICT<br>SEAL</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="memo-bar">
+      <strong>City Notice:</strong> This page is a public reference for Vice District RP laws and penal codes. Final charges may vary based on officer discretion, plea agreements, aggravating circumstances, and court rulings.
+    </div>
+
+    <div class="filters">
+      <input id="searchInput" type="text" placeholder="Search by code, offense, or section... example: robbery, 4e, drug" />
+      <select id="sectionFilter"></select>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">Visible Charges <span id="visibleCount">0</span></div>
+      <div class="stat-card">Sections <span id="sectionCount">0</span></div>
+      <div class="stat-card">Highest Fine <span id="highestFine">$0</span></div>
+    </div>
+
+    <div id="results"></div>
+  </main>
+
+  <footer>Vice District RP • Penal Code Reference • For roleplay use only</footer>
+
+  <script>
+    const RAW_CODES = [
+      ["1b","Section I - Homicide Offenses","Attempted First Degree Murder",70,7500,35,0,null,35000],
+      ["1d","Section I - Homicide Offenses","Attempted Second Degree Murder",60,4000,25,0,null,20000],
+      ["2a","Section II - Manslaughter Offenses","Voluntary Manslaughter",60,2500,30,0],
+      ["2b","Section II - Manslaughter Offenses","Involuntary Manslaughter",45,2000,20,0],
+      ["2c","Section II - Manslaughter Offenses","Vehicular Manslaughter",45,2500,20,0],
+      ["3a","Section III - Violent Offenses","Assault",20,1500,10,0],
+      ["3b","Section III - Violent Offenses","Battery",30,2000,15,0],
+      ["3c","Section III - Violent Offenses","Assault with a Deadly Weapon",30,2500,0,0],
+      ["3d","Section III - Violent Offenses","Torture and Mutilation",70,2500,20,0],
+      ["3e","Section III - Violent Offenses","Organ Harvesting",70,5000,20,0],
+      ["3f","Section III - Violent Offenses","Robbery",30,250,5,0],
+      ["3g","Section III - Violent Offenses","Kidnapping",25,1500,15,0],
+      ["3h","Section III - Violent Offenses","Hostage Taking",30,1500,10,0],
+      ["3i","Section III - Violent Offenses","Theft of Services",25,500,0,0],
+      ["3j","Section III - Violent Offenses","False Imprisonment",20,500,0,0],
+      ["3k","Section III - Violent Offenses","Reckless Endangerment",30,1000,0,0],
+      ["3l","Section III - Violent Offenses","Robbery of Jewelry From a Licensed Jeweler",35,2250,0,0],
+      ["3m","Section III - Violent Offenses","Robbery of Fine Arts from Gallery or Museum",45,4000,0,0],
+      ["3n","Section III - Violent Offenses","Robbery of a Registered Security Vault",45,5000,0,0],
+      ["3o","Section III - Violent Offenses","Vehicular Assault",40,2000,10,0],
+      ["4a","Section IV - Firearms, Weapons, Explosives","Weapons Distribution or Sale",40,1250,0,0],
+      ["4d","Section IV - Firearms, Weapons, Explosives","Weapons Trafficking",60,2500,0,0],
+      ["4e","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 1 Firearm",25,250,5,100],
+      ["4f","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 2 Firearm",45,1000,10,400],
+      ["4g","Section IV - Firearms, Weapons, Explosives","Possession of Explosives / Incendiary Devices",60,5000,0,0,60,20000],
+      ["4h","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of a Taser",20,1500,0,0],
+      ["4i","Section IV - Firearms, Weapons, Explosives","Brandishing a Firearm",10,250,0,0],
+      ["4j","Section IV - Firearms, Weapons, Explosives","Unlawful Discharge of a Firearm",15,300,0,0],
+      ["4k","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of an Illegal Weapon",10,250,0,0],
+      ["4l","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Ammunition",10,100,0,0],
+      ["4m","Section IV - Firearms, Weapons, Explosives","Possession of Illegal Weapon Component",25,250,0,0],
+      ["4n","Section IV - Firearms, Weapons, Explosives","Manufacturing of Firearms",60,5000,0,0],
+      ["4o","Section IV - Firearms, Weapons, Explosives","Manufacturing of Explosives / Incendiary Devices",60,5000,0,0],
+      ["4p","Section IV - Firearms, Weapons, Explosives","Possession of Explosive / Incendiary Components",30,2500,15,1000],
+      ["4q","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 3 Firearm",55,1500,10,450],
+      ["5a","Section V - Controlled Substances","Drug Cultivation",30,1500,0,0],
+      ["5b","Section V - Controlled Substances","Drug Manufacturing",40,3000,0,0],
+      ["5c","Section V - Controlled Substances","Class 1 Drug Possession with Intent to Distribute",15,1000,0,0],
+      ["5d","Section V - Controlled Substances","Class 2 Drug Possession with Intent to Distribute",25,2000,0,0],
+      ["5e","Section V - Controlled Substances","Class 1 Drug Distribution",15,1500,0,0],
+      ["5f","Section V - Controlled Substances","Class 2 Drug Distribution",30,2500,0,0],
+      ["5g","Section V - Controlled Substances","Dealing",10,750,0,0],
+      ["5h","Section V - Controlled Substances","Possession of Marijuana Product",10,500,15,1000],
+      ["6c","Section VI - Federal Charges","Terroristic Threat",120,25000,0,0],
+      ["6e","Section VI - Federal Charges","Bribery",20,500,0,0],
+      ["6f","Section VI - Federal Charges","Embezzlement",40,400,0,0],
+      ["6g","Section VI - Federal Charges","Extortion",50,1000,0,0],
+      ["6h","Section VI - Federal Charges","False Impersonation of Government Official / Attorney",40,1000,0,0],
+      ["6i","Section VI - Federal Charges","Money Laundering",20,500,0,0],
+      ["6j","Section VI - Federal Charges","Bank Robbery",45,3000,0,0],
+      ["6k","Section VI - Federal Charges","Unlawful Practice of Medicine",40,1500,0,0],
+      ["6l","Section VI - Federal Charges","Fraud",30,400,0,0],
+      ["6m","Section VI - Federal Charges","Possession of Human Remains",30,1500,0,0],
+      ["6n","Section VI - Federal Charges","Desecration of Human Remains",50,5000,0,0],
+      ["6o","Section VI - Federal Charges","Illegal Occupation",15,1000,0,0],
+      ["6q","Section VI - Federal Charges","Bomb Threat",120,20000,0,0],
+      ["6r","Section VI - Federal Charges","Identity Theft",30,1000,0,0],
+      ["6s","Section VI - Federal Charges","Desecration of a Grave",35,2500,0,0],
+      ["6t","Section VI - Federal Charges","Robbery of a Financial Reserve",60,6000,0,0],
+      ["7e","Section VII - Justice Related","Obstruction of Justice",30,1000,0,0],
+      ["7f","Section VII - Justice Related","Evading Arrest",30,300,0,0],
+      ["7g","Section VII - Justice Related","Failure to Obey a Lawful Order",15,150,0,0],
+      ["7h","Section VII - Justice Related","Fleeing & Eluding by Foot",10,200,0,0],
+      ["7i","Section VII - Justice Related","Resisting Arrest",15,150,0,0],
+      ["7j","Section VII - Justice Related","Failure to Identify",10,100,0,0],
+      ["7k","Section VII - Justice Related","False Report",10,250,0,0],
+      ["7l","Section VII - Justice Related","Escaping Custody",30,500,0,0],
+      ["7n","Section VII - Justice Related","False Identification",20,200,0,0],
+      ["7o","Section VII - Justice Related","Uttering Threats",10,200,0,0],
+      ["7p","Section VII - Justice Related","Violation of a Restraining Order",100,5000,0,0],
+      ["7q","Section VII - Justice Related","Possession of a Stolen Identification",10,500,0,0],
+      ["7r","Section VII - Justice Related","Wasting Government Resources",35,5000,0,0],
+      ["7s","Section VII - Justice Related","Witness Tampering",100,10000,0,0],
+      ["8a","Section VIII - Property and Vehicle Related","Possession of Stolen Property",5,200,0,0],
+      ["8b","Section VIII - Property and Vehicle Related","Joyriding",10,250,0,0],
+      ["8c","Section VIII - Property and Vehicle Related","Grand Theft Auto",30,1000,10,0],
+      ["8d","Section VIII - Property and Vehicle Related","Hijacking",40,600,15,0],
+      ["8e","Section VIII - Property and Vehicle Related","Grand Larceny",30,1250,10,0],
+      ["8f","Section VIII - Property and Vehicle Related","Petty Larceny",10,500,5,0],
+      ["8g","Section VIII - Property and Vehicle Related","Vandalism",10,100,5,0],
+      ["8h","Section VIII - Property and Vehicle Related","Destruction of Property",15,250,5,0],
+      ["8i","Section VIII - Property and Vehicle Related","Arson",30,1250,10,0],
+      ["8j","Section VIII - Property and Vehicle Related","Hacking or Tampering",15,200,5,0],
+      ["8k","Section VIII - Property and Vehicle Related","ATM Robbery",15,200,5,0],
+      ["8l","Section VIII - Property and Vehicle Related","Burglary",25,300,0,0],
+      ["8m","Section VIII - Property and Vehicle Related","Flying Without a License",50,500,0,0],
+      ["8n","Section VIII - Property and Vehicle Related","Violation of a No Fly Zone",30,1000,0,0],
+      ["8o","Section VIII - Property and Vehicle Related","Unauthorized Use of an Airfield",15,500,0,0],
+      ["8p","Section VIII - Property and Vehicle Related","Reckless Operation of an Aircraft",50,2500,10,0],
+      ["8q","Section VIII - Property and Vehicle Related","Aircraft Hijacking",60,5000,20,0],
+      ["8r","Section VIII - Property and Vehicle Related","Creating an Air Traffic Hazard",15,1000,0,0],
+      ["8s","Section VIII - Property and Vehicle Related","Possession of Fraudulent Vehicle Registration Materials",15,1500,0,0],
+      ["8t","Section VIII - Property and Vehicle Related","Vehicle Registration Fraud",20,3000,0,0],
+      ["8u","Section VIII - Property and Vehicle Related","Possession of Stolen Fine Arts",0,4000,0,0],
+      ["8v","Section VIII - Property and Vehicle Related","Robbery of a Parking Meter",10,100,0,0],
+      ["8w","Section VIII - Property and Vehicle Related","Rummaging",15,300,0,0],
+      ["8x","Section VIII - Property and Vehicle Related","Commercial Burglary",30,500,5,0],
+      ["8y","Section VIII - Property and Vehicle Related","Theft of Goods In Transit",25,1200,5,0],
+      ["A2e","Article II - Attempt / Accomplice / Accessory","Aiding & Abetting",15,250,0,0],
+      ["M1a","Article III - Possession and Contraband","Petty Class 1 Drug Possession",10,250,0,0],
+      ["M1b","Article III - Possession and Contraband","Petty Class 2 Drug Possession",15,350,0,0],
+      ["M1c","Article III - Possession and Contraband","Class 1 Drug Possession",10,500,0,0],
+      ["M1d","Article III - Possession and Contraband","Class 2 Drug Possession",20,1000,0,0],
+      ["M1e","Article III - Possession and Contraband","Possession of Contraband",15,100,0,0,60,null],
+      ["M1f","Article III - Possession and Contraband","Unlawful Possession of Government Property",25,70,0,0],
+      ["M1g","Article III - Possession and Contraband","Misdemeanor Possession of Counterfeit or Marked Bills",10,500,0,0],
+      ["M1h","Article III - Possession and Contraband","Felony Possession of Counterfeit or Marked Bills",20,1000,0,0,100,5000],
+      ["M1i","Article III - Possession and Contraband","Contraband Within a Corrections Facility",0,500,0,0],
+      ["M1j","Article III - Possession and Contraband","Possession of Drug Paraphernalia",15,500,0,0],
+      ["M2a","Article III - Misc Misdemeanors","Disturbing the Peace and Disorderly Conduct",15,500,0,0],
+      ["M2b","Article III - Misc Misdemeanors","Trespassing on Restricted Government Property",160,10000,0,0],
+      ["M2c","Article III - Misc Misdemeanors","Breaking and Entering",10,100,0,0],
+      ["M2d","Article III - Misc Misdemeanors","Stalking",30,1000,0,0],
+      ["M2e","Article III - Misc Misdemeanors","Harassment",30,1000,0,0],
+      ["M2f","Article III - Misc Misdemeanors","Incitement",10,300,0,0],
+      ["M2g","Article III - Misc Misdemeanors","Illegal Dumping",5,50,0,0],
+      ["I1a","Article IV - Infractions and Ordinances","Unlawful Solicitation",0,30,0,0],
+      ["I1b","Article IV - Infractions and Ordinances","Jaywalking",0,30,0,0],
+      ["I1c","Article IV - Infractions and Ordinances","Public Intoxication",0,50,0,0],
+      ["I1d","Article IV - Infractions and Ordinances","Indecent Exposure / Lewd Conduct",5,75,0,0],
+      ["I1e","Article IV - Infractions and Ordinances","Littering",0,200,0,0],
+      ["I1f","Article IV - Infractions and Ordinances","Trespassing",5,75,0,0],
+      ["I1g","Article IV - Infractions and Ordinances","Underage Consumption",0,75,0,0],
+      ["I1h","Article IV - Infractions and Ordinances","Unlicensed Operation of a Business",0,1000,0,0],
+      ["I1i","Article IV - Infractions and Ordinances","Unlicensed Business on Unauthorized Property",0,2000,0,0],
+      ["I1j","Article IV - Infractions and Ordinances","Failure to Carry or Produce License",0,200,0,0],
+      ["G1a","Article V - Governmental Corruption","Accepting Bribes",40,1000,0,0],
+      ["G1b","Article V - Governmental Corruption","Graft or Government Embezzlement",60,800,0,0],
+      ["G1c","Article V - Governmental Corruption","Campaign Finance Violation",0,10000,0,0],
+      ["G1d","Article V - Governmental Corruption","Fundraising Fraud",50,800,0,0],
+      ["G1e","Article V - Governmental Corruption","Fraud on the Government",50,800,0,0],
+      ["G1f","Article V - Governmental Corruption","Extortion by a Government Official",70,2000,0,0]
+    ];
+
+    const CODES = RAW_CODES.map(x => ({
+      code: x[0],
+      section: x[1],
+      name: x[2],
+      time: x[3],
+      fine: x[4],
+      aggravatedTime: x[5] || 0,
+      aggravatedFine: x[6] || 0,
+      timeCap: x[7] ?? null,
+      fineCap: x[8] ?? null
+    }));
+
+    function money(amount) {
+      return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 }).format(amount);
+    }
+
+    function penaltyText(code) {
+      const parts = [];
+      parts.push(`${code.time} months`);
+      if (code.aggravatedTime > 0) parts.push(`+ ${code.aggravatedTime} per aggravated`);
+      if (code.timeCap !== null) parts.push(`cap ${code.timeCap}`);
+      return parts.join(' ');
+    }
+
+    function fineText(code) {
+      const parts = [];
+      parts.push(money(code.fine));
+      if (code.aggravatedFine > 0) parts.push(`+ ${money(code.aggravatedFine)} per aggravated`);
+      if (code.fineCap !== null) parts.push(`cap ${money(code.fineCap)}`);
+      return parts.join(' ');
+    }
+
+    function populateSections() {
+      const select = document.getElementById('sectionFilter');
+      const sections = [...new Set(CODES.map(c => c.section))];
+      select.innerHTML = '<option value="ALL">All Sections</option>';
+      sections.forEach(section => {
+        const option = document.createElement('option');
+        option.value = section;
+        option.textContent = section;
+        select.appendChild(option);
+      });
+      document.getElementById('sectionCount').textContent = sections.length;
+    }
+
+    function getFilteredCodes() {
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const section = document.getElementById('sectionFilter').value;
+      return CODES.filter(code => {
+        const matchesSection = section === 'ALL' || code.section === section;
+        const haystack = `${code.code} ${code.section} ${code.name}`.toLowerCase();
+        const matchesSearch = !query || haystack.includes(query);
+        return matchesSection && matchesSearch;
+      });
+    }
+
+    function render() {
+      const results = document.getElementById('results');
+      const filtered = getFilteredCodes();
+      document.getElementById('visibleCount').textContent = filtered.length;
+      document.getElementById('highestFine').textContent = money(Math.max(...filtered.map(c => c.fine), 0));
+
+      if (filtered.length === 0) {
+        results.innerHTML = '<div class="no-results">No matching penal codes found.</div>';
+        return;
+      }
+
+      const grouped = filtered.reduce((acc, code) => {
+        if (!acc[code.section]) acc[code.section] = [];
+        acc[code.section].push(code);
+        return acc;
+      }, {});
+
+      results.innerHTML = Object.entries(grouped).map(([section, codes]) => `
+        <h2 class="section-title">${section}</h2>
+        <div class="grid">
+          ${codes.map(code => `
+            <article class="charge-card">
+              <div class="charge-top">
+                <div class="charge-name">${code.name}</div>
+                <div class="code">${code.code.toUpperCase()}</div>
+              </div>
+              <div class="meta">
+                <div class="meta-box"><strong>Jail Time</strong>${penaltyText(code)}</div>
+                <div class="meta-box"><strong>Fine</strong>${fineText(code)}</div>
+              </div>
+              ${(code.aggravatedTime > 0 || code.aggravatedFine > 0) ? '<div class="cap">Aggravating penalties may apply when applicable.</div>' : ''}
+              ${(code.timeCap !== null || code.fineCap !== null) ? '<div class="cap">This charge has a maximum cap.</div>' : ''}
+            </article>
+          `).join('')}
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      populateSections();
+      render();
+      document.getElementById('searchInput').addEventListener('input', render);
+      document.getElementById('sectionFilter').addEventListener('change', render);
+    });
+  </script>
+</body>
+</html>
