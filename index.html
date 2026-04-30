@@ -355,7 +355,122 @@
       ["G1e","Article V - Governmental Corruption","Fraud on the Government",50,800,0,0],
       ["G1f","Article V - Governmental Corruption","Extortion by a Government Official",70,2000,0,0]
     ];
+    const CODE_DETAILS = {
 
+        // ---------------- HOMICIDE ----------------
+        "1b": {description:"Attempt to intentionally kill with premeditation.",applies:"Use when suspect plans and attempts to kill but fails."},
+        "1d": {description:"Attempt to kill without premeditation.",applies:"Use when suspect attempts to kill in the moment."},
+
+        // ---------------- MANSLAUGHTER ----------------
+        "2a": {description:"Killing in the heat of passion.",applies:"Use when suspect causes death without prior planning."},
+        "2b": {description:"Unintentional killing due to negligence.",applies:"Use when death results from careless actions."},
+        "2c": {description:"Killing someone using a vehicle.",applies:"Use when a vehicle causes death."},
+
+        // ---------------- VIOLENT ----------------
+        "3a": {description:"Threat of harm with ability to act.",applies:"Use when suspect threatens violence."},
+        "3b": {description:"Physical harmful contact.",applies:"Use when suspect strikes another."},
+        "3c": {description:"Assault using a weapon.",applies:"Use when a weapon is involved in assault."},
+        "3d": {description:"Extreme physical harm or mutilation.",applies:"Use when severe torture is inflicted."},
+        "3e": {description:"Illegal removal of organs.",applies:"Use in RP involving organ harvesting."},
+        "3f": {description:"Taking property by force.",applies:"Use for muggings or direct robberies."},
+        "3g": {description:"Unlawful detainment of a person.",applies:"Use when someone is kidnapped."},
+        "3h": {description:"Holding someone to force demands.",applies:"Use when hostage is used."},
+        "3i": {description:"Theft of services without payment.",applies:"Use for unpaid services."},
+        "3j": {description:"Holding someone against will.",applies:"Use for unlawful detainment."},
+        "3k": {description:"Actions that endanger others.",applies:"Use when reckless danger is created."},
+        "3l": {description:"Robbery targeting jewelry stores.",applies:"Use for jewelry store heists."},
+        "3m": {description:"Theft of fine art.",applies:"Use for museum/gallery robberies."},
+        "3n": {description:"Robbery of secured vaults.",applies:"Use for high-tier vault robberies."},
+        "3o": {description:"Using vehicle to harm.",applies:"Use when vehicle is used as weapon."},
+
+        // ---------------- WEAPONS ----------------
+        "4a": {description:"Selling weapons illegally.",applies:"Use for illegal weapon sales."},
+        "4d": {description:"Large scale weapon trafficking.",applies:"Use for organized distribution."},
+        "4e": {description:"Illegal handgun possession.",applies:"Use when suspect has Class 1 weapon."},
+        "4f": {description:"Illegal rifle/SMG possession.",applies:"Use for Class 2 weapons."},
+        "4g": {description:"Possession of explosives.",applies:"Use when bombs/molotovs found."},
+        "4h": {description:"Illegal taser possession.",applies:"Use for unauthorized tasers."},
+        "4i": {description:"Threatening display of firearm.",applies:"Use when weapon is brandished."},
+        "4j": {description:"Firing weapon unlawfully.",applies:"Use when shots fired illegally."},
+        "4k": {description:"Illegal weapon possession.",applies:"Use for banned weapons."},
+        "4l": {description:"Illegal ammunition possession.",applies:"Use when ammo is unlawful."},
+        "4m": {description:"Illegal weapon parts possession.",applies:"Use for components."},
+        "4n": {description:"Producing firearms illegally.",applies:"Use for crafting guns."},
+        "4o": {description:"Producing explosives.",applies:"Use for bomb manufacturing."},
+        "4p": {description:"Possessing explosive materials.",applies:"Use for bomb components."},
+        "4q": {description:"Illegal heavy weapon possession.",applies:"Use for Class 3 weapons."},
+
+        // ---------------- DRUGS ----------------
+        "5a": {description:"Growing illegal drugs.",applies:"Use for drug farms."},
+        "5b": {description:"Manufacturing drugs.",applies:"Use for drug labs."},
+        "5c": {description:"Possession with intent to sell.",applies:"Use for distribution intent."},
+        "5d": {description:"Higher tier distribution intent.",applies:"Use for large amounts."},
+        "5e": {description:"Selling drugs.",applies:"Use for active dealing."},
+        "5f": {description:"Selling high-class drugs.",applies:"Use for advanced dealing."},
+        "5g": {description:"Street-level dealing.",applies:"Use for small deals."},
+        "5h": {description:"Possession of marijuana.",applies:"Use for weed possession."},
+
+        // ---------------- FEDERAL ----------------
+        "6c": {description:"Threatening mass harm.",applies:"Use for terror threats."},
+        "6e": {description:"Offering/accepting bribes.",applies:"Use for corruption."},
+        "6f": {description:"Stealing entrusted funds.",applies:"Use for embezzlement."},
+        "6g": {description:"Forcing payment through threats.",applies:"Use for extortion."},
+        "6h": {description:"Pretending to be an official.",applies:"Use for impersonation."},
+        "6i": {description:"Cleaning illegal money.",applies:"Use for laundering."},
+        "6j": {description:"Bank robbery.",applies:"Use for bank heists."},
+        "6k": {description:"Practicing medicine illegally.",applies:"Use without license."},
+        "6l": {description:"Deception for gain.",applies:"Use for scams."},
+        "6m": {description:"Possession of human remains.",applies:"Use for corpse possession."},
+        "6n": {description:"Mishandling human remains.",applies:"Use for desecration."},
+        "6o": {description:"Illegal occupation of property.",applies:"Use for squatting."},
+        "6q": {description:"False bomb threat.",applies:"Use for threats."},
+        "6r": {description:"Stealing identity.",applies:"Use for identity theft."},
+        "6s": {description:"Grave desecration.",applies:"Use for cemetery crimes."},
+        "6t": {description:"High security robbery.",applies:"Use for reserve robbery."},
+
+        // ---------------- JUSTICE ----------------
+        "7e": {description:"Interfering with justice.",applies:"Use when blocking police."},
+        "7f": {description:"Evading police in vehicle.",applies:"Use for pursuits."},
+        "7g": {description:"Ignoring lawful commands.",applies:"Use when refusing orders."},
+        "7h": {description:"Fleeing on foot.",applies:"Use for running."},
+        "7i": {description:"Resisting arrest.",applies:"Use when fighting arrest."},
+        "7j": {description:"Refusing ID.",applies:"Use when not identifying."},
+        "7k": {description:"Filing false reports.",applies:"Use when lying to police."},
+        "7l": {description:"Escaping custody.",applies:"Use when fleeing jail."},
+        "7n": {description:"Using fake identity.",applies:"Use for fake ID."},
+        "7o": {description:"Making threats.",applies:"Use for verbal threats."},
+        "7p": {description:"Breaking restraining order.",applies:"Use when violating court order."},
+        "7q": {description:"Having stolen ID.",applies:"Use for stolen identity."},
+        "7r": {description:"Wasting resources.",applies:"Use for misuse of services."},
+        "7s": {description:"Tampering with witnesses.",applies:"Use for intimidation."},
+
+        // ---------------- PROPERTY ----------------
+        "8a": {description:"Possession of stolen goods.",applies:"Use when holding stolen items."},
+        "8b": {description:"Driving stolen vehicle temporarily.",applies:"Use for joyriding."},
+        "8c": {description:"Vehicle theft.",applies:"Use for GTA."},
+        "8d": {description:"Taking vehicle by force.",applies:"Use for hijacking."},
+        "8e": {description:"Major theft.",applies:"Use for high-value theft."},
+        "8f": {description:"Minor theft.",applies:"Use for small theft."},
+        "8g": {description:"Damaging property.",applies:"Use for vandalism."},
+        "8h": {description:"Destroying property.",applies:"Use for severe damage."},
+        "8i": {description:"Starting fires illegally.",applies:"Use for arson."},
+        "8j": {description:"Tampering with systems.",applies:"Use for hacking."},
+        "8k": {description:"Robbing ATMs.",applies:"Use for ATM hits."},
+        "8l": {description:"Breaking into buildings.",applies:"Use for burglary."},
+
+        // ---------------- TRAFFIC ----------------
+        "9a": {description:"Exceeding speed limit.",applies:"Use for speeding."},
+        "9b": {description:"Dangerous driving.",applies:"Use for reckless driving."},
+        "9c": {description:"Street racing.",applies:"Use for racing."},
+        "9d": {description:"Driving without license.",applies:"Use when unlicensed."},
+        "9e": {description:"Lane violations.",applies:"Use when swerving."},
+        "9f": {description:"Running red lights.",applies:"Use at intersections."},
+        "9g": {description:"Illegal U-turn.",applies:"Use for improper turns."},
+        "9h": {description:"Evading police.",applies:"Use when fleeing."},
+        "9i": {description:"Leaving accident scene.",applies:"Use for hit and run."},
+        "9j": {description:"Driving under influence.",applies:"Use for DUI."}
+
+    };
     const CODES = RAW_CODES.map(x => ({
       code: x[0],
       section: x[1],
@@ -365,7 +480,9 @@
       aggravatedTime: x[5] || 0,
       aggravatedFine: x[6] || 0,
       timeCap: x[7] ?? null,
-      fineCap: x[8] ?? null
+      fineCap: x[8] ?? null,
+      description: CODE_DETAILS[x[0]]?.description || "No description added.",
+      applies: CODE_DETAILS[x[0]]?.applies || "Use when the facts match this charge."
     }));
 
     function money(amount) {
@@ -406,7 +523,7 @@
       const section = document.getElementById('sectionFilter').value;
       return CODES.filter(code => {
         const matchesSection = section === 'ALL' || code.section === section;
-        const haystack = `${code.code} ${code.section} ${code.name}`.toLowerCase();
+        const haystack = `${code.code} ${code.section} ${code.name} ${code.description} ${code.applies}`.toLowerCase();
         const matchesSearch = !query || haystack.includes(query);
         return matchesSection && matchesSearch;
       });
@@ -438,6 +555,8 @@
                 <div class="charge-name">${code.name}</div>
                 <div class="code">${code.code.toUpperCase()}</div>
               </div>
+              <div class="cap"><strong>Description:</strong> ${code.description}</div>
+              <div class="cap"><strong>When it applies:</strong> ${code.applies}</div>
               <div class="meta">
                 <div class="meta-box"><strong>Jail Time</strong>${penaltyText(code)}</div>
                 <div class="meta-box"><strong>Fine</strong>${fineText(code)}</div>
