@@ -191,7 +191,7 @@
     <div class="memo-bar">
       <strong>City Notice:</strong> This page is a public reference for Vice District RP laws and penal codes. Final charges may vary based on officer discretion, plea agreements, aggravating circumstances, and court rulings.
     </div>
-
+    <div id="lawsContainer"></div>
     <div class="filters">
       <input id="searchInput" type="text" placeholder="Search by code, offense, or section... example: robbery, 4e, drug" />
       <select id="sectionFilter"></select>
@@ -209,6 +209,64 @@
   <footer>Vice District RP • Penal Code Reference • For roleplay use only</footer>
 
   <script>
+    function renderLaws() {
+        const container = document.getElementById("lawsContainer");
+
+        const grouped = LAWS.reduce((acc, law) => {
+            if (!acc[law.article]) acc[law.article] = [];
+            acc[law.article].push(law);
+            return acc;
+        }, {});
+
+        container.innerHTML = Object.entries(grouped).map(([article, laws]) => `
+            <h2 class="section-title">${article}</h2>
+            <div class="grid">
+            ${laws.map(law => `
+                <div class="charge-card">
+                <div class="charge-name">${law.title}</div>
+                <div class="cap">${law.text}</div>
+                </div>
+            `).join("")}
+            </div>
+        `).join("");
+    }
+    const LAWS = [
+        {
+            article: "Article I - General Laws",
+            title: "Firearm Licenses",
+            text: "Individuals may obtain firearm licenses if eligible. Misuse may result in revocation."
+        },
+        {
+            article: "Article II - Due Process",
+            title: "Detainment",
+            text: "Individuals may be detained up to 60 minutes with reasonable suspicion."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Self Defense",
+            text: "Force may be used to prevent immediate harm if not provoked."
+        },
+        {
+            article: "Article IV - Drug Laws",
+            title: "Drug Possession",
+            text: "Possession of illegal drugs is a chargeable offense."
+        },
+        {
+            article: "Article V - Gang Laws",
+            title: "Conspiracy",
+            text: "Planning a crime with others is chargeable even if not completed."
+        },
+        {
+            article: "Article VI - Charge Structure",
+            title: "Primary vs Accessory",
+            text: "Primary is the main crime. Accessory supports the crime."
+        },
+        {
+            article: "Article VII - Enforcement",
+            title: "Officer Discretion",
+            text: "Officers may adjust charges based on the situation."
+        }
+    ];
     const RAW_CODES = [
       ["1b","Section I - Homicide Offenses","Attempted First Degree Murder",70,7500,35,0,null,35000],
       ["1d","Section I - Homicide Offenses","Attempted Second Degree Murder",60,4000,25,0,null,20000],
@@ -568,6 +626,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+      renderLaws();
       populateSections();
       render();
       document.getElementById('searchInput').addEventListener('input', render);
