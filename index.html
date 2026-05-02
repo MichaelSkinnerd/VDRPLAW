@@ -240,962 +240,1235 @@
         `).join("");
     }
     const LAWS = [
-        {
-            article: "Article I - General Laws",
-            title: "Firearm Licenses",
-            text: "Individuals may obtain firearm licenses if eligible. Misuse may result in revocation."
-        },
-        {
-            article: "Article II - Due Process",
-            title: "Detainment",
-            text: "Individuals may be detained for investigative purposes for a reasonable period, not exceeding 60 minutes, while officers determine involvement in a crime."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Definition of a Crime",
-            text: "A crime is any act punishable by jail time under the penal code. Infractions are punishable by fines only."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Primary Charge",
-            text: "A primary charge is the main offense committed during an incident."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Accessory Charge",
-            text: "An accessory charge applies to actions that support, assist, or occur alongside a primary offense."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Reasonable Suspicion",
-            text: "Reasonable suspicion is based on specific and articulable facts that suggest criminal activity may be occurring."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Probable Cause",
-            text: "Probable cause is sufficient evidence that would lead a reasonable person to believe a crime has been committed."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Detainment",
-            text: "Detainment is the temporary holding of an individual for investigative purposes when reasonable suspicion exists."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Arrest",
-            text: "An arrest is the lawful taking of an individual into custody based on probable cause or a valid warrant."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Self Defense",
-            text: "Self-defense is the use of reasonable force to prevent immediate harm, provided the individual did not initiate the conflict."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Deadly Force",
-            text: "Deadly force is force likely to cause serious injury or death and may only be used when necessary to prevent imminent threat."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Lawful Order",
-            text: "A lawful order is a command issued by an authorized official that must be followed unless it violates established rights."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Motor Vehicle",
-            text: "A motor vehicle is any self-propelled vehicle intended for use on roads or public pathways."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Public Place",
-            text: "A public place is any location accessible to the general public, including streets, parks, and businesses."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Restricted Area",
-            text: "A restricted area is any location designated as limited access, including government buildings, active crime scenes, and secured zones."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Concealment of Identity",
-            text: "Concealment of identity refers to the act of hiding one’s face or identifying features to avoid recognition."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Use of Force",
-            text: "Use of force includes any physical action intended to control, restrain, or harm another individual."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Exigent Circumstances",
-            text: "Exigent circumstances are emergency situations that require immediate action, allowing law enforcement to act without a warrant."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Statute of Limitations",
-            text: "The statute of limitations defines the maximum time after an event that legal proceedings may be initiated."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Evidence",
-            text: "Evidence includes any information, items, or testimony used to establish facts in an investigation or case."
-        },
-        {
-            article: "Article III - Definitions",
-            title: "Double Jeopardy",
-            text: "An individual cannot be tried twice for the same offense once a final judgment has been made."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Controlled Substances",
-            text: "Controlled substances are categorized into classes based on legality and severity. Class 1 substances may be legal in limited quantities if defined by city law. Class 2 substances are illegal to possess, distribute, or manufacture."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Possession of Controlled Substances",
-            text: "Possession of illegal drugs is a chargeable offense. Severity may depend on quantity, classification, and context."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Possession with Intent to Distribute",
-            text: "Possession of controlled substances in quantities, packaging, or circumstances indicating intent to sell or distribute may result in a primary charge."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Distribution of Controlled Substances",
-            text: "Selling, transferring, or supplying controlled substances to another individual is prohibited and considered a primary offense."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Drug Manufacturing",
-            text: "Producing, processing, or creating controlled substances is prohibited and considered a serious offense."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Drug Cultivation",
-            text: "Growing or cultivating controlled substances without authorization is prohibited."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Drug Paraphernalia",
-            text: "Possession of items used to produce, package, or consume controlled substances may be charged as an accessory offense."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Use of Drugs in Commission of a Crime",
-            text: "Being under the influence of controlled substances while committing another crime may result in additional accessory charges or enhancements."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Distribution Near Protected Areas",
-            text: "Distribution of controlled substances near hospitals, government buildings, or active public areas may result in enhanced penalties."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Possession of Large Quantities",
-            text: "Possession of unusually large quantities of controlled substances may automatically imply intent to distribute."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Drug Trafficking",
-            text: "Transporting or coordinating the movement of controlled substances in bulk quantities is considered a high-level offense."
-        },
-        {
-            article: "Article IV - Drug Laws",
-            title: "Unauthorized Medical Distribution",
-            text: "Providing controlled substances under the guise of medical treatment without proper authorization is prohibited."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Gang-Related Activity",
-            text: "Crimes committed in association with a gang, crew, or organized criminal group may result in enhanced penalties."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Participation in Organized Crime",
-            text: "Knowingly participating in organized criminal activity is prohibited when connected to crimes such as robbery, trafficking, extortion, or violence."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Conspiracy",
-            text: "Planning, agreeing, or coordinating with others to commit a crime is chargeable even if the crime is not completed."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Racketeering",
-            text: "Repeated criminal activity carried out by a group or organization may be treated as racketeering."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Gang Intimidation",
-            text: "Threatening, pressuring, or intimidating citizens, witnesses, businesses, or government workers on behalf of a gang is prohibited."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Criminal Recruitment",
-            text: "Recruiting individuals into a criminal organization for illegal activity is prohibited."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Gang Territory Claims",
-            text: "Using threats, violence, or criminal activity to claim or control city areas is prohibited."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Possession of Gang Materials",
-            text: "Possession of materials clearly tied to organized criminal activity may be used as supporting evidence."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Retaliation",
-            text: "Acts of violence, threats, or intimidation carried out in response to police action, witness cooperation, or rival disputes may receive enhanced penalties."
-        },
-        {
-            article: "Article V - Gang Laws",
-            title: "Organized Weapons or Drug Operations",
-            text: "Coordinated group activity involving weapons, drugs, trafficking, or robbery may be treated as organized crime."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Crime vs Non-Crime",
-        text: "A Crime is any offense punishable by jail time. A Non-Crime is punishable by fines only and does not result in incarceration."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Primary Charges",
-        text: "A Primary Charge represents the main criminal act committed during an incident."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Accessory Charges",
-        text: "Accessory Charges apply to actions that support, assist, or occur alongside a primary offense."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Stacking Charges",
-        text: "Multiple charges may be applied when separate criminal actions occur during a single incident, provided each action is distinct."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Duplicate Charges",
-        text: "The same charge should not be applied multiple times for a single act unless clearly justified by separate occurrences."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Aggravating Factors",
-        text: "Certain actions such as use of a weapon, gang involvement, or crimes in protected areas may increase penalties."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Mitigating Factors",
-        text: "Cooperation, lack of prior offenses, or minor involvement may justify reduced charges or penalties."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Plea Agreements",
-        text: "Individuals may enter plea agreements which may reduce charges, fines, or jail time at officer or judicial discretion."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Maximum Penalties",
-        text: "Certain charges may have maximum limits on jail time or fines. These limits must be respected when calculating totals."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Charge Discretion",
-        text: "Officers may exercise reasonable discretion when selecting charges to ensure fairness and accuracy based on the situation."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Intent vs Outcome",
-        text: "Charges may be influenced by both the intent of the suspect and the outcome of their actions."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Attempted Crimes",
-        text: "Attempting to commit a crime may still result in charges, even if the crime was not successfully completed."
-        },
-        {
-        article: "Article VI - Charge Structure",
-        title: "Accessory vs Primary Determination",
-        text: "If an individual plays a direct role in committing the main crime, they may be charged as primary. Supporting roles may be charged as accessory."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Officer Discretion",
-        text: "Officers may use reasonable discretion when enforcing laws, including issuing warnings, citations, detainment, or arrest based on the situation."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Fair Enforcement",
-        text: "Laws must be enforced fairly and consistently. Personal bias, favoritism, or retaliation is prohibited."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Evidence Handling",
-        text: "All evidence must be collected, documented, and handled lawfully. Evidence should be clearly tied to the incident when used for charges."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Scene Control",
-        text: "Law enforcement may secure active scenes to protect life, preserve evidence, and maintain public safety."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Use of Force",
-        text: "Officers may use reasonable force necessary to control a situation, prevent harm, or make a lawful arrest. Excessive force is prohibited."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Pursuit Policy",
-        text: "Officers may pursue suspects when lawful grounds exist. Pursuits should consider public safety, traffic conditions, and severity of the offense."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Search Authority",
-        text: "Officers may search individuals, vehicles, or property when probable cause, consent, arrest, warrant, or exigent circumstances apply."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Medical Treatment",
-        text: "Injured suspects, victims, and civilians should receive medical care when reasonably available before or during processing."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Professional Conduct",
-        text: "Officers must act professionally, respect civilian rights, and avoid unnecessary escalation."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Report Writing",
-        text: "Officers should document major incidents, arrests, evidence, charges, fines, jail time, and plea agreements when applicable."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Command Authority",
-        text: "During active scenes, ranking officers may establish scene command and direct law enforcement operations."
-        },
-        {
-        article: "Article VII - Enforcement",
-        title: "Failure to Follow Policy",
-        text: "Officers who violate enforcement standards may be subject to internal review, discipline, or removal from duty."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Obedience to Traffic Control Devices",
-        text: "Drivers must obey all posted signs, traffic lights, and road markings unless otherwise directed by law enforcement."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Speed Limits",
-        text: "Drivers must operate vehicles within posted speed limits or at a safe speed for current road conditions."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Reckless Driving",
-        text: "Operating a vehicle in a manner that endangers others, including excessive speed, swerving, or unsafe maneuvers, is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Failure to Yield to Emergency Vehicles",
-        text: "Drivers must yield the right of way to emergency vehicles using lights or sirens by pulling over safely."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Failure to Maintain Lane",
-        text: "Drivers must remain within their lane and avoid unnecessary or unsafe lane changes."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Unsafe Passing",
-        text: "Passing other vehicles must be done safely and legally. Passing in unsafe areas or conditions is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Driving Opposite of Traffic",
-        text: "Driving against the flow of traffic without lawful reason is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Illegal Turns",
-        text: "Improper turns, including illegal U-turns or turns where prohibited, are not allowed."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Running a Red Light or Stop Sign",
-        text: "Failing to stop at traffic control signals or signs is a violation of traffic laws."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Driving Without a License",
-        text: "Operating a motor vehicle without a valid driver's license is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Vehicle Equipment Requirements",
-        text: "Vehicles must have proper registration, visible license plates, and functioning lights to be operated legally."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Illegal Parking",
-        text: "Parking in restricted areas, blocking traffic, or obstructing emergency access points is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Street Racing",
-        text: "Participating in or organizing illegal street races is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Driving Under the Influence",
-        text: "Operating a vehicle while impaired by alcohol or drugs is prohibited and considered a serious offense."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Hit and Run",
-        text: "Leaving the scene of an accident without providing information or rendering aid is prohibited."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Failure to Stop for Law Enforcement",
-        text: "Drivers must stop when signaled by law enforcement. Failure to stop may result in pursuit and additional charges."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Careless Driving",
-        text: "Operating a vehicle without proper attention or regard for surroundings may result in citation."
-        },
-        {
-        article: "Article VIII - Traffic and Road Laws",
-        title: "Use of Mobile Devices While Driving",
-        text: "Using handheld devices while driving in a manner that distracts from safe operation is prohibited."
-        },
-        {
-            article: "Article VIII - Traffic and Road Laws",
-            title: "Illegal Parking or Blocking Roadway",
-            text: "Vehicles may not block roads, emergency lanes, government entrances, hospital access, or active scenes. Vehicles may be ticketed, towed, or impounded."
-        },
-        {
-            article: "Article VIII - Traffic and Road Laws",
-            title: "Vehicle Equipment Violations",
-            text: "Vehicles must have visible plates, working lights, and safe road condition. Unsafe or unidentified vehicles may be stopped and cited."
-        },
-        {
-            article: "Article IX - Public Order Laws",
-            title: "Public Disturbance",
-            text: "Creating excessive noise, disorder, threats, or public disruption may result in removal, citation, or arrest depending on severity."
-        },
-        {
-            article: "Article IX - Public Order Laws",
-            title: "Unlawful Assembly",
-            text: "Groups gathered for the purpose of causing disruption, intimidation, violence, or interference with city operations may be ordered to disperse."
-        },
-        {
-            article: "Article X - Evidence and Investigation Laws",
-            title: "Evidence Tampering",
-            text: "Destroying, hiding, moving, altering, or interfering with evidence connected to an investigation is a chargeable offense."
-        },
-        {
-            article: "Article X - Evidence and Investigation Laws",
-            title: "Destruction of Evidence",
-            text: "Knowingly destroying evidence to prevent law enforcement from using it in an investigation may result in additional charges."
-        },
-        {
-            article: "Article X - Evidence and Investigation Laws",
-            title: "False Witness Statement",
-            text: "Providing false or misleading information as a witness during an investigation may result in charges."
-        },
-        {
-            article: "Article XI - Emergency Services Laws",
-            title: "Interference with EMS",
-            text: "Interfering with medical staff, blocking treatment, obstructing transport, or disrupting a medical scene may result in charges."
-        },
-        {
-            article: "Article XI - Emergency Services Laws",
-            title: "False Emergency Call",
-            text: "Knowingly making a false emergency report or abusing emergency services may result in fines, jail time, or both."
-        },
-        {
-            article: "Article XII - Business and Economy Laws",
-            title: "Operating Without a Business License",
-            text: "Businesses must operate with proper city authorization. Unauthorized businesses may be fined, shut down, or investigated."
-        },
-        {
-            article: "Article XII - Business and Economy Laws",
-            title: "Black Market Sales",
-            text: "Selling illegal goods, restricted weapons, contraband, or controlled substances outside lawful business channels is prohibited."
-        },
-        {
-            article: "Article XIII - Modifier Laws",
-            title: "Weapon Enhancement",
-            text: "Crimes committed while armed or while using a weapon may receive enhanced penalties or additional accessory charges."
-        },
-        {
-            article: "Article XIII - Modifier Laws",
-            title: "Gang Enhancement",
-            text: "Crimes committed in connection with gang activity or organized crime may receive enhanced penalties."
-        },
-        {
-            article: "Article XIII - Modifier Laws",
-            title: "Medical Zone Enhancement",
-            text: "Crimes committed at hospitals, clinics, medical scenes, or against medical staff may receive enhanced penalties."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Unlawful Use of a Firearm",
-            text: "Using a firearm in a manner that endangers others without lawful justification may result in charges, even if no one is injured."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Discharge of a Firearm in City Limits",
-            text: "Firing a weapon within city limits without lawful cause is prohibited and may result in immediate investigation and charges."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Negligent Discharge",
-            text: "Accidental or careless discharge of a firearm that creates risk to others is a chargeable offense."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Failure to Secure a Firearm",
-            text: "Firearms must be secured when not in use. Allowing unauthorized individuals access may result in charges."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Use of a Firearm During Commission of a Crime",
-            text: "Using or possessing a firearm while committing another crime may result in enhanced penalties or additional charges."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Possession of a Firearm in Restricted Areas",
-            text: "Firearms are prohibited in government buildings, police stations, and designated restricted zones unless authorized."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Brandishing with Intent to Intimidate",
-            text: "Displaying a firearm in a threatening manner to intimidate or control another individual is prohibited."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Unlawful Transfer of Firearms",
-            text: "Selling, trading, or transferring firearms to individuals not legally allowed to possess them is prohibited."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Possession of Firearm with Altered Identification",
-            text: "Possessing a firearm with removed or altered serial identification is a serious offense."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Use of Automatic or Restricted Weapons",
-            text: "Possession or use of restricted or automatic weapons without authorization is prohibited."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Discharging a Firearm from a Vehicle",
-            text: "Firing a weapon from a moving vehicle is prohibited and considered a high-risk offense."
-        },
-        {
-            article: "Article XIV - Firearm Conduct Laws",
-            title: "Carrying a Firearm While Masked During a Crime",
-            text: "Carrying a firearm while concealing identity during a criminal act may result in enhanced penalties."
-        },
+
+        // ---------------- ARTICLE I - GENERAL LAWS ----------------
         {
             article: "Article I - General Laws",
             title: "Compliance with Law",
-            text: "All individuals within Vice District must follow city laws. Ignorance of the law is not a valid defense."
+            text: "All individuals within the city are required to follow the penal code and city laws. Ignorance of the law is not a valid defense."
         },
         {
             article: "Article I - General Laws",
             title: "Lawful Orders",
-            text: "Individuals must comply with lawful orders issued by law enforcement or authorized officials unless the order violates established rights."
+            text: "Individuals must comply with lawful orders given by law enforcement, emergency services, or authorized officials unless the order clearly violates established rights."
         },
         {
             article: "Article I - General Laws",
             title: "Public Conduct",
-            text: "Individuals are expected to behave in a manner that does not disrupt public peace, safety, or order."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "Interference",
-            text: "Interfering with law enforcement, emergency services, or government operations is prohibited."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "False Information",
-            text: "Providing false or misleading information to law enforcement or officials may result in enforcement action."
+            text: "Individuals are expected to behave in a way that does not disrupt public peace, safety, emergency operations, or lawful city activity."
         },
         {
             article: "Article I - General Laws",
             title: "Identification",
-            text: "Individuals must identify themselves when lawfully detained. Drivers must present a valid license when requested."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "Trespassing",
-            text: "Entering or remaining on private or restricted property without permission is prohibited."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "Public Safety",
-            text: "Actions that endanger others or create unnecessary risk to public safety are prohibited."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "Emergency Services Protection",
-            text: "Interfering with police, fire, or medical operations is prohibited and may result in increased penalties."
-        },
-        {
-            article: "Article I - General Laws",
-            title: "Abuse of Emergency Systems",
-            text: "Knowingly making false emergency calls or misusing emergency communication systems is prohibited."
+            text: "Individuals must identify themselves when lawfully detained, arrested, or involved in a traffic stop. Drivers must provide a valid license when requested."
         },
         {
             article: "Article I - General Laws",
             title: "Concealment of Identity",
-            text: "Concealing identity in restricted areas, during investigations, or while committing crimes may result in additional penalties."
+            text: "Concealing identity while committing a crime, entering restricted areas, or interfering with investigations may result in additional enforcement action."
+        },
+        {
+            article: "Article I - General Laws",
+            title: "Interference with Public Services",
+            text: "Interfering with law enforcement, EMS, fire, court, or government operations is prohibited and may result in obstruction or related charges."
+        },
+        {
+            article: "Article I - General Laws",
+            title: "False Information",
+            text: "Knowingly providing false or misleading information to law enforcement, emergency services, court officials, or government staff is prohibited."
+        },
+        {
+            article: "Article I - General Laws",
+            title: "Emergency Systems",
+            text: "Misusing emergency equipment, emergency communication systems, panic buttons, or false emergency reports is prohibited."
+        },
+        {
+            article: "Article I - General Laws",
+            title: "Restricted Areas",
+            text: "Restricted areas include government buildings, secured scenes, police areas, jails, courts, restricted airspace, and any location marked or declared limited access."
         },
         {
             article: "Article I - General Laws",
             title: "Responsibility for Actions",
-            text: "Individuals are responsible for their actions and may be held accountable for any resulting harm or damage."
+            text: "Individuals are responsible for the harm, damage, disruption, or risk caused by their actions, whether intentional, reckless, or negligent."
         },
+
+        // ---------------- ARTICLE II - DUE PROCESS ----------------
         {
             article: "Article II - Due Process",
             title: "Presumption of Innocence",
-            text: "All individuals are presumed innocent until proven guilty. Charges must be supported by evidence or reasonable suspicion."
+            text: "All individuals are presumed innocent until proven guilty. Charges must be supported by evidence, probable cause, or lawful investigative findings."
         },
         {
             article: "Article II - Due Process",
             title: "Reasonable Suspicion",
-            text: "Law enforcement may detain individuals when there are clear, articulable facts suggesting involvement in criminal activity."
+            text: "Reasonable suspicion exists when specific facts suggest a person may be involved in criminal activity. It allows temporary detainment for investigation."
         },
         {
             article: "Article II - Due Process",
-            title: "Identification Requirements",
-            text: "Individuals must identify themselves when lawfully detained. Drivers must present a valid license during traffic stops."
+            title: "Detainment",
+            text: "Detainment is the temporary holding of a person for investigation. Detainment must be based on reasonable suspicion and should not exceed a reasonable period, generally no more than 60 minutes."
         },
         {
             article: "Article II - Due Process",
             title: "Probable Cause",
-            text: "An arrest or search requires probable cause, meaning sufficient evidence exists to reasonably believe a crime has been committed."
+            text: "Probable cause exists when facts and evidence would lead a reasonable officer to believe a crime has been committed and the person is connected to it."
         },
         {
             article: "Article II - Due Process",
-            title: "Arrest Procedures",
-            text: "Individuals may only be arrested when probable cause or a valid warrant exists. Arrested individuals are subject to search and processing."
+            title: "Arrest",
+            text: "An arrest is the lawful taking of a person into custody based on probable cause, a warrant, or a chargeable offense."
         },
         {
             article: "Article II - Due Process",
             title: "Search and Seizure",
-            text: "Searches require probable cause or consent unless exigent circumstances justify immediate action."
+            text: "Searches may be conducted with probable cause, consent, a warrant, after lawful arrest, or under exigent circumstances."
         },
         {
             article: "Article II - Due Process",
             title: "Terry Frisk",
-            text: "Officers may conduct a limited pat-down for weapons if there is reason to believe a suspect is armed and dangerous."
+            text: "Officers may conduct a limited pat-down for weapons when they reasonably believe a detained person may be armed and dangerous."
         },
         {
             article: "Article II - Due Process",
             title: "Miranda Rights",
-            text: "Individuals must be informed of their rights upon arrest. Failure to do so may impact the use of statements in court."
+            text: "Individuals should be advised of their rights during custodial questioning. Failure to advise rights may affect the use of statements in court."
         },
         {
             article: "Article II - Due Process",
             title: "Right to Remain Silent",
-            text: "Individuals have the right to remain silent and are not required to answer questions beyond identification when detained or arrested."
+            text: "Individuals have the right to remain silent and are not required to answer investigative questions beyond lawful identification requirements."
         },
         {
             article: "Article II - Due Process",
-            title: "Use of Force",
-            text: "Law enforcement may use reasonable force necessary to control a situation. Excessive force is prohibited."
+            title: "Medical Treatment",
+            text: "Injured suspects, victims, and civilians should receive medical care when reasonably available before or during processing."
         },
         {
             article: "Article II - Due Process",
             title: "Plea Agreements",
-            text: "Individuals may enter plea agreements, which may reduce charges, fines, or jail time at officer or judicial discretion."
-        },
-        {
-            article: "Article II - Due Process",
-            title: "Processing",
-            text: "Individuals who refuse to cooperate or enter a plea may be fully processed and held pending further action."
+            text: "Plea agreements may reduce charges, fines, or jail time at officer, prosecutor, or judicial discretion when appropriate."
         },
         {
             article: "Article II - Due Process",
             title: "Bail and Bond",
-            text: "Bail may be set depending on the severity of the offense. Failure to appear may result in additional charges."
+            text: "Bail or bond may be set depending on the severity of the offense, flight risk, prior history, and court discretion."
         },
         {
             article: "Article II - Due Process",
             title: "Appeals",
-            text: "Individuals may appeal charges or convictions unless rights are waived through plea agreements."
+            text: "Individuals may appeal charges, convictions, or sentencing unless appeal rights are waived through a valid agreement."
+        },
+
+        // ---------------- ARTICLE III - DEFINITIONS ----------------
+        {
+            article: "Article III - Definitions",
+            title: "Crime",
+            text: "A crime is an offense punishable by jail time, fines, or both under the penal code."
         },
         {
-            article: "Article II - Due Process",
+            article: "Article III - Definitions",
+            title: "Infraction",
+            text: "An infraction is a minor offense generally punishable by a fine only unless additional crimes occur."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Misdemeanor",
+            text: "A misdemeanor is a lower-level crime that may include jail time, fines, or both."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Felony",
+            text: "A felony is a serious crime involving major harm, weapons, organized crime, corruption, severe property loss, or significant public danger."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Primary Charge",
+            text: "A primary charge is the main criminal offense committed during an incident."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Accessory Charge",
+            text: "An accessory charge applies when a person assists, supports, encourages, or participates in a crime without being the main actor."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Attempted Crime",
+            text: "An attempted crime occurs when a person takes direct action toward committing a crime but does not complete it."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Conspiracy",
+            text: "Conspiracy is planning, agreeing, or coordinating with others to commit a crime, even if the crime is not completed."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Self Defense",
+            text: "Self-defense is the reasonable use of force to prevent immediate harm, provided the person did not initiate or escalate the conflict unlawfully."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Deadly Force",
+            text: "Deadly force is force likely to cause serious injury or death and is only justified when necessary to prevent an imminent threat of death or serious harm."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Use of Force",
+            text: "Use of force includes physical action used to control, restrain, defend, or stop another person. Force must be reasonable based on the threat."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Public Place",
+            text: "A public place is any location generally accessible to the public, including streets, sidewalks, parks, businesses, and public buildings."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Motor Vehicle",
+            text: "A motor vehicle is any self-propelled vehicle intended for roadway or public pathway use."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Aircraft",
+            text: "An aircraft is any vehicle capable of flight, including helicopters, planes, or similar airborne vehicles."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Evidence",
+            text: "Evidence includes physical items, testimony, recordings, reports, photographs, documents, or observations used to prove facts in a case."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Exigent Circumstances",
+            text: "Exigent circumstances are urgent emergency conditions requiring immediate action to prevent harm, escape, destruction of evidence, or major public risk."
+        },
+        {
+            article: "Article III - Definitions",
+            title: "Double Jeopardy",
+            text: "A person may not be tried or punished twice for the same offense after final judgment has been reached."
+        },
+
+        // ---------------- ARTICLE IV - VIOLENT AND HOMICIDE LAWS ----------------
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Assault",
+            text: "Assault includes intentional, knowing, reckless, or threatening actions that cause physical contact, injury, fear, or immediate danger to another person."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Aggravated Assault",
+            text: "Aggravated assault applies when an assault causes serious injury, involves reckless disregard for life, or creates a high risk of severe harm."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Assault with a Deadly Weapon",
+            text: "Using, displaying, or threatening with a deadly weapon during an assault may result in elevated charges."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Criminal Threats",
+            text: "Threatening to harm, kill, kidnap, damage property, or commit a crime against another person is prohibited."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Reckless Endangerment",
+            text: "Reckless actions that place others at risk of injury, death, or serious danger are prohibited even if no one is injured."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Kidnapping and Imprisonment",
+            text: "Taking, moving, restraining, or holding a person against their will is prohibited and may be charged based on severity and duration."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Hostage Taking",
+            text: "Holding a person against their will to gain leverage, demand payment, force action, or negotiate is a serious violent offense."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Torture",
+            text: "Intentionally causing severe physical or psychological suffering to another person is prohibited."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Manslaughter",
+            text: "Manslaughter applies when a person causes death through reckless, negligent, or non-premeditated conduct."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Vehicular Manslaughter",
+            text: "Causing the death of another person through reckless or unlawful operation of a vehicle may be charged as vehicular manslaughter."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Murder",
+            text: "Murder is the unlawful killing of another person. Severity depends on intent, planning, victim status, and circumstances."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Attempted Murder",
+            text: "Attempted murder applies when a suspect takes direct action intended to kill another person but the victim survives."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Crimes Against Public Servants",
+            text: "Violent crimes against peace officers, EMS, court officials, or public servants may carry enhanced penalties."
+        },
+        {
+            article: "Article IV - Violent and Homicide Laws",
+            title: "Extreme Offenses",
+            text: "Cannibalism, mutilation, desecration, torture, or similar extreme acts may result in high-level felony charges."
+        },
+
+        // ---------------- ARTICLE V - PROPERTY, THEFT, AND VEHICLE LAWS ----------------
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Theft",
+            text: "Taking property, money, items, or services without permission is prohibited. Severity depends on value, method, and circumstances."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Petty Theft",
+            text: "Petty theft applies to low-value theft or minor stolen property incidents."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Grand Theft and Grand Larceny",
+            text: "Grand theft or grand larceny applies to high-value property theft or significant loss to a victim or business."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Burglary",
+            text: "Entering or remaining in a building, business, home, or secured area with intent to commit a crime is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Robbery",
+            text: "Taking property from a person or place through force, threat, intimidation, or fear is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Armed Robbery",
+            text: "Robbery committed while armed, while displaying a weapon, or while threatening weapon use is a more severe offense."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Possession of Stolen Property",
+            text: "Knowingly possessing stolen property, marked bills, stolen identification, government-issued items, or crime-related items is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Vehicle Theft",
+            text: "Taking, operating, or controlling another person's vehicle without consent is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Carjacking",
+            text: "Taking a vehicle by force, intimidation, or threat from its occupant is prohibited and treated as a serious offense."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Vehicle Tampering",
+            text: "Interfering with, disabling, damaging, breaking into, or manipulating a vehicle without authorization is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Aircraft Theft and Misuse",
+            text: "Stealing, misusing, hijacking, or unlawfully operating an aircraft is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Trespassing",
+            text: "Entering or remaining on private, restricted, government, or secured property without permission is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Vandalism and Destruction",
+            text: "Damaging, defacing, destroying, or interfering with private, business, or government property is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Arson",
+            text: "Using fire, explosives, or accelerants to damage property, cause harm, or create danger is prohibited."
+        },
+        {
+            article: "Article V - Property, Theft, and Vehicle Laws",
+            title: "Littering and Illegal Dumping",
+            text: "Discarding trash, materials, or waste in unauthorized public or private areas is prohibited."
+        },
+
+        // ---------------- ARTICLE VI - DRUG AND CONTRABAND LAWS ----------------
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Controlled Substances",
+            text: "Controlled substances include illegal narcotics, restricted drugs, prescription substances without authorization, and substances defined by city law."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Drug Possession",
+            text: "Possession of controlled substances is prohibited unless specifically authorized. Severity depends on type, amount, packaging, and context."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Possession with Intent to Distribute",
+            text: "Possession of controlled substances in quantities, packaging, or circumstances indicating sale or transfer may be charged as intent to distribute."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Drug Sale and Distribution",
+            text: "Selling, transferring, supplying, or attempting to distribute controlled substances is prohibited."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Drug Manufacturing",
+            text: "Producing, processing, refining, or creating controlled substances is prohibited."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Drug Cultivation",
+            text: "Growing, cultivating, harvesting, or maintaining illegal drug plants without authorization is prohibited."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Drug Trafficking",
+            text: "Transporting, coordinating, or moving controlled substances in bulk quantities is considered a high-level offense."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Contraband",
+            text: "Contraband includes illegal items, restricted items, crime tools, stolen goods, weapons, controlled substances, or prohibited items inside secured facilities."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Contraband in Government Facilities",
+            text: "Possessing weapons, drugs, stolen property, tools, or restricted items in jails, courts, police stations, or government buildings is prohibited."
+        },
+        {
+            article: "Article VI - Drug and Contraband Laws",
+            title: "Nonlegal Currency",
+            text: "Possession, transfer, or use of stolen, marked, counterfeit, or nonlegal currency may result in criminal charges."
+        },
+
+        // ---------------- ARTICLE VII - FIREARMS, WEAPONS, AND EXPLOSIVES ----------------
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Firearm Licenses",
+            text: "Individuals may possess lawful firearms only when properly licensed or authorized. Misuse may result in revocation, seizure, or charges."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Weapon Classes",
+            text: "Weapons may be separated into classes based on severity, danger, legality, and licensing requirements."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Unlawful Possession of Weapons",
+            text: "Possessing a firearm, restricted weapon, illegal weapon, or weapon class without proper authorization is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Criminal Use of a Weapon",
+            text: "Using, carrying, or displaying a weapon during the commission of a crime may result in additional charges or enhanced penalties."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Brandishing a Weapon",
+            text: "Displaying a firearm or weapon in a threatening, intimidating, or unlawful manner is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Unlawful Discharge",
+            text: "Firing a weapon without lawful reason, in city limits, from a vehicle, or in a way that endangers others is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Illegal Firearm Modifications",
+            text: "Possessing, installing, selling, or using illegal firearm components, altered identifiers, or restricted modifications is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Weapon Sales",
+            text: "Selling, trading, transferring, or supplying weapons without authorization or to prohibited individuals is illegal."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Weapon Trafficking",
+            text: "Transporting, coordinating, or distributing weapons in bulk quantities is considered a high-level offense."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Weapon Manufacturing",
+            text: "Manufacturing, assembling, or producing firearms without authorization is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Explosive Devices",
+            text: "Possessing, using, transferring, manufacturing, or attempting to create explosive or incendiary devices without authorization is prohibited."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Restricted Weapon Areas",
+            text: "Possessing firearms, weapons, or explosives in government buildings, jails, courts, hospitals, police stations, or restricted zones may result in charges."
+        },
+        {
+            article: "Article VII - Firearms, Weapons, and Explosives",
+            title: "Insurrection",
+            text: "Attempting to overthrow, disrupt, or violently attack government authority is a high-level offense."
+        },
+
+        // ---------------- ARTICLE VIII - JUSTICE, GOVERNMENT, AND COURT LAWS ----------------
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Obstruction of Justice",
+            text: "Interfering with law enforcement, investigations, arrests, evidence collection, court proceedings, or public safety operations is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Resisting Arrest",
+            text: "Refusing, fighting, fleeing, or physically preventing a lawful arrest is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Evading",
+            text: "Fleeing from lawful detention or arrest on foot, in a vehicle, or by other means is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Failure to Identify",
+            text: "Failure to provide lawful identification when detained, arrested, or operating a vehicle may result in charges."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Impersonation",
+            text: "Falsely identifying as another person, official, peace officer, public servant, attorney, judge, or government employee is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Perjury",
+            text: "Providing false statements while under oath or during legal proceedings is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Contempt of Court",
+            text: "Disrupting, disobeying, or disrespecting lawful court authority or court proceedings is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Failure to Appear",
+            text: "Failing to appear for required court proceedings, hearings, or legal obligations may result in additional charges."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Court Orders",
+            text: "Violating a lawful court order, restraining order, protective order, or judicial directive is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Evidence Tampering",
+            text: "Destroying, hiding, moving, altering, planting, or interfering with evidence connected to an investigation is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Witness Tampering",
+            text: "Threatening, intimidating, coaching, bribing, or coercing a witness is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Harboring a Fugitive",
+            text: "Knowingly hiding, assisting, transporting, or protecting a person wanted by law enforcement is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Jailbreak and Escape",
+            text: "Escaping custody, attempting escape, assisting escape, or breaking out of a detention facility is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Government Corruption",
+            text: "Using government office, authority, influence, funds, equipment, or access for personal gain or unlawful activity is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Bribery",
+            text: "Offering, accepting, soliciting, or providing money, favors, property, or benefits to influence an official action is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Fraud, Forgery, and Money Laundering",
+            text: "Deceiving others for gain, falsifying documents, or processing illegal funds as legal currency is prohibited."
+        },
+        {
+            article: "Article VIII - Justice, Government, and Court Laws",
+            title: "Unlawful Practice",
+            text: "Performing licensed services, medical work, legal services, or government duties without proper authorization is prohibited."
+        },
+
+        // ---------------- ARTICLE IX - TRAFFIC AND ROAD LAWS ----------------
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Traffic Control Devices",
+            text: "Drivers must obey posted signs, traffic lights, lane markings, and lawful traffic directions unless instructed otherwise by law enforcement."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Speeding",
+            text: "Operating a vehicle above posted limits or at unsafe speeds for conditions is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Negligent Driving",
+            text: "Driving without proper attention or care for surroundings may result in citation or charges."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Reckless Driving",
+            text: "Driving in a manner that knowingly endangers others, including unsafe speed, swerving, or dangerous maneuvers, is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Reckless Evading",
+            text: "Fleeing from law enforcement while creating danger to others or property is a serious traffic offense."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Failure to Yield to Emergency Vehicles",
+            text: "Drivers must safely yield to emergency vehicles using lights, sirens, or lawful signals."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Failure to Maintain Lane",
+            text: "Drivers must remain within their lane and avoid unsafe or unnecessary lane changes."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Illegal Turns and Passing",
+            text: "Illegal U-turns, unsafe passing, unlawful turns, and prohibited maneuvers are traffic violations."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Failure to Stop",
+            text: "Drivers must stop at lawful stop signs, red lights, traffic controls, or when ordered by law enforcement."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Driving Without a License",
+            text: "Operating a vehicle without proper licensing is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Driving While Intoxicated",
+            text: "Operating a vehicle while impaired by alcohol, drugs, or controlled substances is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Hit and Run",
+            text: "Leaving the scene of an accident without stopping, providing information, or rendering aid when reasonable is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Street Racing",
+            text: "Participating in, organizing, or encouraging illegal street racing is prohibited."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Vehicle Equipment",
+            text: "Vehicles must have safe operation, working lights, visible plates, and roadworthy condition."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Unauthorized Parking",
+            text: "Parking in restricted areas, blocking roads, emergency access, government entrances, or active scenes is prohibited and may result in towing or impound."
+        },
+        {
+            article: "Article IX - Traffic and Road Laws",
+            title: "Unlawful Use of a Motor Vehicle",
+            text: "Using a motor vehicle without lawful purpose, permission, or proper operation may result in charges."
+        },
+
+        // ---------------- ARTICLE X - AIRCRAFT AND RESTRICTED AIRSPACE ----------------
+        {
+            article: "Article X - Aircraft and Restricted Airspace",
+            title: "Pilot Licensing",
+            text: "Operating aircraft without proper licensing or authorization is prohibited."
+        },
+        {
+            article: "Article X - Aircraft and Restricted Airspace",
+            title: "Restricted Airspace",
+            text: "Flying into restricted, government-controlled, emergency, or secured airspace without permission is prohibited."
+        },
+        {
+            article: "Article X - Aircraft and Restricted Airspace",
+            title: "Reckless Aircraft Operation",
+            text: "Operating aircraft in a way that endangers life, property, public safety, or emergency operations is prohibited."
+        },
+        {
+            article: "Article X - Aircraft and Restricted Airspace",
+            title: "Aircraft Theft or Hijacking",
+            text: "Stealing, hijacking, or unlawfully controlling aircraft is prohibited."
+        },
+
+        // ---------------- ARTICLE XI - PUBLIC ORDER AND CIVIL CONDUCT ----------------
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Disorderly Conduct",
+            text: "Behavior that creates public disruption, hazardous conditions, offensive conduct, or unnecessary public alarm is prohibited."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Disturbing the Peace",
+            text: "Actions that disrupt public order, create excessive noise, or interfere with normal public activity may result in citation or arrest."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Harassment",
+            text: "Repeated unwanted contact, threats, verbal attacks, intimidation, or disruptive conduct toward another person is prohibited."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Stalking",
+            text: "Following, monitoring, tracking, or repeatedly contacting another person without consent is prohibited."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Unlawful Assembly",
+            text: "Groups gathered to disrupt, intimidate, threaten, interfere, or prepare for unlawful acts may be ordered to disperse."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Inciting a Riot",
+            text: "Encouraging or provoking a group to create civil unrest, violence, property damage, or danger is prohibited."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Loitering on Government Property",
+            text: "Remaining on government property for an extended time without lawful purpose may result in removal or charges."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Public Intoxication",
+            text: "Being intoxicated in public in a way that creates risk, disruption, or inability to care for oneself may result in citation or custody."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Public Indecency",
+            text: "Exposing oneself or engaging in lewd conduct in public is prohibited."
+        },
+        {
+            article: "Article XI - Public Order and Civil Conduct",
+            title: "Vigilantism",
+            text: "Attempting to enforce laws, punish suspects, or carry out justice without legal authority is prohibited."
+        },
+
+        // ---------------- ARTICLE XII - GANG AND ORGANIZED CRIME ----------------
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Gang-Related Activity",
+            text: "Crimes committed in association with a gang, crew, or organized criminal group may result in enhanced penalties."
+        },
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Gang-Related Shooting",
+            text: "Discharging firearms in connection with gang activity, rivalry, territory disputes, or organized crime is a serious offense."
+        },
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Organized Crime",
+            text: "Coordinated group activity involving robbery, trafficking, extortion, violence, weapons, or drugs may be treated as organized crime."
+        },
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Gang Intimidation",
+            text: "Threatening, pressuring, or intimidating citizens, witnesses, businesses, or government workers on behalf of a gang is prohibited."
+        },
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Retaliation",
+            text: "Acts of violence, threats, intimidation, or property damage carried out in response to police action, witness cooperation, or rival disputes may receive enhanced penalties."
+        },
+        {
+            article: "Article XII - Gang and Organized Crime",
+            title: "Recruitment and Territory Claims",
+            text: "Recruiting individuals into criminal activity or using threats, violence, or crimes to control city areas is prohibited."
+        },
+
+        // ---------------- ARTICLE XIII - BUSINESS, ECONOMY, AND LICENSING ----------------
+        {
+            article: "Article XIII - Business, Economy, and Licensing",
+            title: "Business Licensing",
+            text: "Businesses must operate with proper city authorization. Unauthorized businesses may be fined, shut down, or investigated."
+        },
+        {
+            article: "Article XIII - Business, Economy, and Licensing",
+            title: "Black Market Sales",
+            text: "Selling illegal goods, restricted weapons, contraband, stolen items, or controlled substances outside lawful business channels is prohibited."
+        },
+        {
+            article: "Article XIII - Business, Economy, and Licensing",
+            title: "Unlicensed Services",
+            text: "Providing professional, medical, security, legal, or government-like services without proper licensing or authority is prohibited."
+        },
+        {
+            article: "Article XIII - Business, Economy, and Licensing",
+            title: "Financial Crimes",
+            text: "Fraud, embezzlement, money laundering, extortion, counterfeit currency, and illegal financial schemes are prohibited."
+        },
+
+        // ---------------- ARTICLE XIV - HUNTING AND WILDLIFE LAWS ----------------
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Hunting License",
+            text: "Individuals must possess a valid hunting license when harvesting legal game."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Restricted Hunting Areas",
+            text: "Hunting in city limits, restricted areas, protected zones, private property without permission, or marked no-hunting areas is prohibited."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Legal Hunting Weapons",
+            text: "Game must be harvested only with lawful hunting weapons or approved equipment."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Hunting Hours",
+            text: "Harvesting animals outside of approved hunting hours is prohibited."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Overhunting",
+            text: "Taking more game than legally allowed or exceeding harvest limits is prohibited."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Poaching",
+            text: "Harvesting protected, restricted, non-harvestable, or illegally obtained animals is prohibited."
+        },
+        {
+            article: "Article XIV - Hunting and Wildlife Laws",
+            title: "Animal Cruelty",
+            text: "Knowingly abusing, neglecting, torturing, or causing unnecessary suffering to an animal is prohibited."
+        },
+
+        // ---------------- ARTICLE XV - CHARGE STRUCTURE AND SENTENCING ----------------
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Charge Selection",
+            text: "Officers should select charges that accurately reflect the suspect's actions, intent, harm caused, and evidence available."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Severity Scaling",
+            text: "Charges should scale based on severity, including harm caused, weapon use, intent, public danger, victim status, property value, and outcome."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Stacking Charges",
+            text: "Multiple charges may be applied when separate criminal acts occur during the same incident, provided each act is distinct and supported."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Duplicate Charges",
+            text: "The same charge should not be applied multiple times for the same single act unless separate victims, separate actions, or separate incidents justify it."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Accessory vs Primary",
+            text: "A person who directly commits the main crime may receive the primary charge. A person who assists, encourages, or supports may receive accessory charges."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Attempted Crimes",
+            text: "Attempted crimes may be charged when a suspect takes direct action toward a crime but the crime is not completed."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Aggravating Factors",
+            text: "Use of weapons, gang involvement, crimes against public servants, protected locations, repeat offenses, or severe harm may justify higher penalties."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Mitigating Factors",
+            text: "Cooperation, minor involvement, lack of injury, restitution, or lack of prior offenses may justify reduced penalties or plea consideration."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
+            title: "Maximum Penalties",
+            text: "Any maximum jail time, fine, or sentencing cap set by city policy, court ruling, or server rules must be followed."
+        },
+        {
+            article: "Article XV - Charge Structure and Sentencing",
             title: "Officer Discretion",
-            text: "Officers may use reasonable judgment when enforcing laws, including issuing warnings, citations, or arrests."
+            text: "Officers may use reasonable discretion when issuing warnings, citations, arrests, plea offers, or charge reductions."
         }
     ];
     const RAW_CODES = [
-      ["1b","Section I - Homicide Offenses","Attempted First Degree Murder",70,7500,35,0,null,35000],
-      ["1b","Section I - Homicide Offenses","Attempted First Degree Murder of LEO",70,15000,35,0,null,75000],
-      ["1d","Section I - Homicide Offenses","Attempted Second Degree Murder",60,4000,25,0,null,20000],
-      ["2a","Section II - Manslaughter Offenses","Voluntary Manslaughter",60,2500,30,0],
-      ["2b","Section II - Manslaughter Offenses","Involuntary Manslaughter",45,2000,20,0],
-      ["2c","Section II - Manslaughter Offenses","Vehicular Manslaughter",45,2500,20,0],
-      ["3a","Section III - Violent Offenses","Assault",20,1500,10,0],
-      ["3b","Section III - Violent Offenses","Battery",30,2000,15,0],
-      ["3c","Section III - Violent Offenses","Assault with a Deadly Weapon",30,2500,0,0],
-      ["3d","Section III - Violent Offenses","Torture and Mutilation",70,2500,20,0],
-      ["3e","Section III - Violent Offenses","Organ Harvesting",70,5000,20,0],
-      ["3f","Section III - Violent Offenses","Robbery",30,250,5,0],
-      ["3g","Section III - Violent Offenses","Kidnapping",25,1500,15,0],
-      ["3h","Section III - Violent Offenses","Hostage Taking",30,1500,10,0],
-      ["3i","Section III - Violent Offenses","Theft of Services",25,500,0,0],
-      ["3j","Section III - Violent Offenses","False Imprisonment",20,500,0,0],
-      ["3k","Section III - Violent Offenses","Reckless Endangerment",30,1000,0,0],
-      ["3l","Section III - Violent Offenses","Robbery of Jewelry From a Licensed Jeweler",35,2250,0,0],
-      ["3m","Section III - Violent Offenses","Robbery of Fine Arts from Gallery or Museum",45,4000,0,0],
-      ["3n","Section III - Violent Offenses","Robbery of a Registered Security Vault",45,5000,0,0],
-      ["3o","Section III - Violent Offenses","Vehicular Assault",40,2000,10,0],
-      ["4a","Section IV - Firearms, Weapons, Explosives","Weapons Distribution or Sale",40,1250,0,0],
-      ["4d","Section IV - Firearms, Weapons, Explosives","Weapons Trafficking",60,2500,0,0],
-      ["4e","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 1 Firearm",25,250,5,100],
-      ["4f","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 2 Firearm",45,1000,10,400],
-      ["4g","Section IV - Firearms, Weapons, Explosives","Possession of Explosives / Incendiary Devices",60,5000,0,0,60,20000],
-      ["4h","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of a Taser",20,1500,0,0],
-      ["4i","Section IV - Firearms, Weapons, Explosives","Brandishing a Firearm",10,250,0,0],
-      ["4j","Section IV - Firearms, Weapons, Explosives","Unlawful Discharge of a Firearm",15,300,0,0],
-      ["4k","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of an Illegal Weapon",10,250,0,0],
-      ["4l","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Ammunition",10,100,0,0],
-      ["4m","Section IV - Firearms, Weapons, Explosives","Possession of Illegal Weapon Component",25,250,0,0],
-      ["4n","Section IV - Firearms, Weapons, Explosives","Manufacturing of Firearms",60,5000,0,0],
-      ["4o","Section IV - Firearms, Weapons, Explosives","Manufacturing of Explosives / Incendiary Devices",60,5000,0,0],
-      ["4p","Section IV - Firearms, Weapons, Explosives","Possession of Explosive / Incendiary Components",30,2500,15,1000],
-      ["4q","Section IV - Firearms, Weapons, Explosives","Unlawful Possession of Class 3 Firearm",55,1500,10,450],
-      ["5a","Section V - Controlled Substances","Drug Cultivation",30,1500,0,0],
-      ["5b","Section V - Controlled Substances","Drug Manufacturing",40,3000,0,0],
-      ["5c","Section V - Controlled Substances","Class 1 Drug Possession with Intent to Distribute",15,1000,0,0],
-      ["5d","Section V - Controlled Substances","Class 2 Drug Possession with Intent to Distribute",25,2000,0,0],
-      ["5e","Section V - Controlled Substances","Class 1 Drug Distribution",15,1500,0,0],
-      ["5f","Section V - Controlled Substances","Class 2 Drug Distribution",30,2500,0,0],
-      ["5g","Section V - Controlled Substances","Dealing",10,750,0,0],
-      ["5h","Section V - Controlled Substances","Possession of Marijuana Product",10,500,15,1000],
-      ["6c","Section VI - Federal Charges","Terroristic Threat",120,25000,0,0],
-      ["6e","Section VI - Federal Charges","Bribery",20,500,0,0],
-      ["6f","Section VI - Federal Charges","Embezzlement",40,400,0,0],
-      ["6g","Section VI - Federal Charges","Extortion",50,1000,0,0],
-      ["6h","Section VI - Federal Charges","False Impersonation of Government Official / Attorney",40,1000,0,0],
-      ["6i","Section VI - Federal Charges","Money Laundering",20,500,0,0],
-      ["6j","Section VI - Federal Charges","Bank Robbery",45,3000,0,0],
-      ["6k","Section VI - Federal Charges","Unlawful Practice of Medicine",40,1500,0,0],
-      ["6l","Section VI - Federal Charges","Fraud",30,400,0,0],
-      ["6m","Section VI - Federal Charges","Possession of Human Remains",30,1500,0,0],
-      ["6n","Section VI - Federal Charges","Desecration of Human Remains",50,5000,0,0],
-      ["6o","Section VI - Federal Charges","Illegal Occupation",15,1000,0,0],
-      ["6q","Section VI - Federal Charges","Bomb Threat",120,20000,0,0],
-      ["6r","Section VI - Federal Charges","Identity Theft",30,1000,0,0],
-      ["6s","Section VI - Federal Charges","Desecration of a Grave",35,2500,0,0],
-      ["6t","Section VI - Federal Charges","Robbery of a Financial Reserve",60,6000,0,0],
-      ["7e","Section VII - Justice Related","Obstruction of Justice",30,1000,0,0],
-      ["7f","Section VII - Justice Related","Evading Arrest",30,300,0,0],
-      ["7g","Section VII - Justice Related","Failure to Obey a Lawful Order",15,150,0,0],
-      ["7h","Section VII - Justice Related","Fleeing & Eluding by Foot",10,200,0,0],
-      ["7i","Section VII - Justice Related","Resisting Arrest",15,150,0,0],
-      ["7j","Section VII - Justice Related","Failure to Identify",10,100,0,0],
-      ["7k","Section VII - Justice Related","False Report",10,250,0,0],
-      ["7l","Section VII - Justice Related","Escaping Custody",30,500,0,0],
-      ["7n","Section VII - Justice Related","False Identification",20,200,0,0],
-      ["7o","Section VII - Justice Related","Uttering Threats",10,200,0,0],
-      ["7p","Section VII - Justice Related","Violation of a Restraining Order",100,5000,0,0],
-      ["7q","Section VII - Justice Related","Possession of a Stolen Identification",10,500,0,0],
-      ["7r","Section VII - Justice Related","Wasting Government Resources",35,5000,0,0],
-      ["7s","Section VII - Justice Related","Witness Tampering",100,10000,0,0],
-      ["8a","Section VIII - Property and Vehicle Related","Possession of Stolen Property",5,200,0,0],
-      ["8b","Section VIII - Property and Vehicle Related","Joyriding",10,250,0,0],
-      ["8c","Section VIII - Property and Vehicle Related","Grand Theft Auto",30,1000,10,0],
-      ["8d","Section VIII - Property and Vehicle Related","Hijacking",40,600,15,0],
-      ["8e","Section VIII - Property and Vehicle Related","Grand Larceny",30,1250,10,0],
-      ["8f","Section VIII - Property and Vehicle Related","Petty Larceny",10,500,5,0],
-      ["8g","Section VIII - Property and Vehicle Related","Vandalism",10,100,5,0],
-      ["8h","Section VIII - Property and Vehicle Related","Destruction of Property",15,250,5,0],
-      ["8i","Section VIII - Property and Vehicle Related","Arson",30,1250,10,0],
-      ["8j","Section VIII - Property and Vehicle Related","Hacking or Tampering",15,200,5,0],
-      ["8k","Section VIII - Property and Vehicle Related","ATM Robbery",15,200,5,0],
-      ["8l","Section VIII - Property and Vehicle Related","Burglary",25,300,0,0],
-      ["8m","Section VIII - Property and Vehicle Related","Flying Without a License",50,500,0,0],
-      ["8n","Section VIII - Property and Vehicle Related","Violation of a No Fly Zone",30,1000,0,0],
-      ["8o","Section VIII - Property and Vehicle Related","Unauthorized Use of an Airfield",15,500,0,0],
-      ["8p","Section VIII - Property and Vehicle Related","Reckless Operation of an Aircraft",50,2500,10,0],
-      ["8q","Section VIII - Property and Vehicle Related","Aircraft Hijacking",60,5000,20,0],
-      ["8r","Section VIII - Property and Vehicle Related","Creating an Air Traffic Hazard",15,1000,0,0],
-      ["8s","Section VIII - Property and Vehicle Related","Possession of Fraudulent Vehicle Registration Materials",15,1500,0,0],
-      ["8t","Section VIII - Property and Vehicle Related","Vehicle Registration Fraud",20,3000,0,0],
-      ["8u","Section VIII - Property and Vehicle Related","Possession of Stolen Fine Arts",0,4000,0,0],
-      ["8v","Section VIII - Property and Vehicle Related","Robbery of a Parking Meter",10,100,0,0],
-      ["8w","Section VIII - Property and Vehicle Related","Rummaging",15,300,0,0],
-      ["8x","Section VIII - Property and Vehicle Related","Commercial Burglary",30,500,5,0],
-      ["8y","Section VIII - Property and Vehicle Related","Theft of Goods In Transit",25,1200,5,0],
-      ["9a","Section IX - Traffic Offenses","Speeding",0,250,0,0],
-      ["9b","Section IX - Traffic Offenses","Reckless Driving",10,500,5,0],
-      ["9c","Section IX - Traffic Offenses","Street Racing",20,1000,10,0],
-      ["9d","Section IX - Traffic Offenses","Driving Without a License",10,500,0,0],
-      ["9e","Section IX - Traffic Offenses","Failure to Maintain Lane",0,150,0,0],
-      ["9f","Section IX - Traffic Offenses","Running a Red Light",0,200,0,0],
-      ["9g","Section IX - Traffic Offenses","Illegal U-Turn",0,150,0,0],
-      ["9h","Section IX - Traffic Offenses","Evading Police (Vehicle)",30,1500,0,0],
-      ["9i","Section IX - Traffic Offenses","Hit and Run",25,2000,10,0],
-      ["9j","Section IX - Traffic Offenses","Driving Under the Influence (DUI)",30,2500,10,0],
-      ["A2e","Article II - Attempt / Accomplice / Accessory","Aiding & Abetting",15,250,0,0],
-      ["M1a","Article III - Possession and Contraband","Petty Class 1 Drug Possession",10,250,0,0],
-      ["M1b","Article III - Possession and Contraband","Petty Class 2 Drug Possession",15,350,0,0],
-      ["M1c","Article III - Possession and Contraband","Class 1 Drug Possession",10,500,0,0],
-      ["M1d","Article III - Possession and Contraband","Class 2 Drug Possession",20,1000,0,0],
-      ["M1e","Article III - Possession and Contraband","Possession of Contraband",15,100,0,0,60,null],
-      ["M1f","Article III - Possession and Contraband","Unlawful Possession of Government Property",25,70,0,0],
-      ["M1g","Article III - Possession and Contraband","Misdemeanor Possession of Counterfeit or Marked Bills",10,500,0,0],
-      ["M1h","Article III - Possession and Contraband","Felony Possession of Counterfeit or Marked Bills",20,1000,0,0,100,5000],
-      ["M1i","Article III - Possession and Contraband","Contraband Within a Corrections Facility",0,500,0,0],
-      ["M1j","Article III - Possession and Contraband","Possession of Drug Paraphernalia",15,500,0,0],
-      ["M2a","Article III - Misc Misdemeanors","Disturbing the Peace and Disorderly Conduct",15,500,0,0],
-      ["M2b","Article III - Misc Misdemeanors","Trespassing on Restricted Government Property",160,10000,0,0],
-      ["M2c","Article III - Misc Misdemeanors","Breaking and Entering",10,100,0,0],
-      ["M2d","Article III - Misc Misdemeanors","Stalking",30,1000,0,0],
-      ["M2e","Article III - Misc Misdemeanors","Harassment",30,1000,0,0],
-      ["M2f","Article III - Misc Misdemeanors","Incitement",10,300,0,0],
-      ["M2g","Article III - Misc Misdemeanors","Illegal Dumping",5,50,0,0],
-      ["I1a","Article IV - Infractions and Ordinances","Unlawful Solicitation",0,30,0,0],
-      ["I1b","Article IV - Infractions and Ordinances","Jaywalking",0,30,0,0],
-      ["I1c","Article IV - Infractions and Ordinances","Public Intoxication",0,50,0,0],
-      ["I1d","Article IV - Infractions and Ordinances","Indecent Exposure / Lewd Conduct",5,75,0,0],
-      ["I1e","Article IV - Infractions and Ordinances","Littering",0,200,0,0],
-      ["I1f","Article IV - Infractions and Ordinances","Trespassing",5,75,0,0],
-      ["I1g","Article IV - Infractions and Ordinances","Underage Consumption",0,75,0,0],
-      ["I1h","Article IV - Infractions and Ordinances","Unlicensed Operation of a Business",0,1000,0,0],
-      ["I1i","Article IV - Infractions and Ordinances","Unlicensed Business on Unauthorized Property",0,2000,0,0],
-      ["I1j","Article IV - Infractions and Ordinances","Failure to Carry or Produce License",0,200,0,0],
-      ["G1a","Article V - Governmental Corruption","Accepting Bribes",40,1000,0,0],
-      ["G1b","Article V - Governmental Corruption","Graft or Government Embezzlement",60,800,0,0],
-      ["G1c","Article V - Governmental Corruption","Campaign Finance Violation",0,10000,0,0],
-      ["G1d","Article V - Governmental Corruption","Fundraising Fraud",50,800,0,0],
-      ["G1e","Article V - Governmental Corruption","Fraud on the Government",50,800,0,0],
-      ["G1f","Article V - Governmental Corruption","Extortion by a Government Official",70,2000,0,0]
+      ["P.C. 1001", "Section III - Violent Offenses", "Simple Assault", 5, 300, 0, 0],
+      ["P.C. 1002", "Section III - Violent Offenses", "Assault", 15, 850, 0, 0],
+      ["P.C. 1003", "Section III - Violent Offenses", "Aggravated Assault", 25, 1500, 0, 0],
+      ["P.C. 1004", "Section III - Violent Offenses", "Assault with a Deadly Weapon", 35, 4000, 0, 0],
+      ["P.C. 1005", "Section II - Manslaughter Offenses", "Involuntary Manslaughter", 65, 7500, 0, 0],
+      ["P.C. 1006", "Section II - Manslaughter Offenses", "Vehicular Manslaughter", 60, 7500, 0, 0],
+      ["P.C. 1007", "Section I - Homicide Offenses", "Attempted Murder of a Civilian", 75, 10000, 0, 0],
+      ["P.C. 1008", "Section I - Homicide Offenses", "Second Degree Murder", 100, 15000, 0, 0],
+      ["P.C. 1009", "Section I - Homicide Offenses", "Accessory to Second Degree Murder", 60, 7500, 0, 0],
+      ["P.C. 1010", "Section I - Homicide Offenses", "First Degree Murder", 120, 20000, 0, 0],
+      ["P.C. 1011", "Section I - Homicide Offenses", "Accessory to First Degree Murder", 80, 12000, 0, 0],
+      ["P.C. 1012", "Section I - Homicide Offenses", "Murder of a Public Servant or Peace Officer", 150, 30000, 0, 0],
+      ["P.C. 1013", "Section I - Homicide Offenses", "Attempted Murder of a Public Servant or Peace Officer", 100, 18000, 0, 0],
+      ["P.C. 1014", "Section I - Homicide Offenses", "Accessory to the Murder of a Public Servant or Peace Officer", 100, 20000, 0, 0],
+      ["P.C. 1015", "Section III - Violent Offenses", "Unlawful Imprisonment", 15, 1000, 0, 0],
+      ["P.C. 1016", "Section III - Violent Offenses", "Kidnapping", 30, 2500, 0, 0],
+      ["P.C. 1017", "Section III - Violent Offenses", "Accessory to Kidnapping", 15, 1200, 0, 0],
+      ["P.C. 1018", "Section III - Violent Offenses", "Attempted Kidnapping", 20, 1000, 0, 0],
+      ["P.C. 1019", "Section III - Violent Offenses", "Hostage Taking", 40, 3500, 0, 0],
+      ["P.C. 1020", "Section III - Violent Offenses", "Accessory to Hostage Taking", 20, 1500, 0, 0],
+      ["P.C. 1021", "Section III - Violent Offenses", "Unlawful Imprisonment of a Public Servant or Peace Officer.", 45, 5000, 0, 0],
+      ["P.C. 1022", "Section III - Violent Offenses", "Criminal Threats", 10, 750, 0, 0],
+      ["P.C. 1023", "Section III - Violent Offenses", "Reckless Endangerment", 15, 1200, 0, 0],
+      ["P.C. 1024", "Section III - Violent Offenses", "Gang Related Shooting", 45, 5000, 0, 0],
+      ["P.C. 1025", "Section III - Violent Offenses", "Cannibalism", 120, 25000, 0, 0],
+      ["P.C. 1026", "Section III - Violent Offenses", "Torture", 70, 10000, 0, 0],
+      ["P.C. 2001", "Section VIII - Property and Vehicle Related", "Petty Theft", 0, 250, 0, 0],
+      ["P.C. 2002", "Section VIII - Property and Vehicle Related", "Grand Theft", 10, 750, 0, 0],
+      ["P.C. 2003", "Section VIII - Property and Vehicle Related", "Grand Theft Auto A", 20, 1500, 0, 0],
+      ["P.C. 2004", "Section VIII - Property and Vehicle Related", "Grand Theft Auto B", 35, 3500, 0, 0],
+      ["P.C. 2005", "Section VIII - Property and Vehicle Related", "Carjacking", 40, 4000, 0, 0],
+      ["P.C. 2006", "Section VIII - Property and Vehicle Related", "Burglary", 15, 1000, 0, 0],
+      ["P.C. 2007", "Section VIII - Property and Vehicle Related", "Robbery", 30, 2500, 0, 0],
+      ["P.C. 2008", "Section VIII - Property and Vehicle Related", "Accessory to Robbery", 15, 1250, 0, 0],
+      ["P.C. 2009", "Section VIII - Property and Vehicle Related", "Attempted Robbery", 20, 1500, 0, 0],
+      ["P.C. 2010", "Section VIII - Property and Vehicle Related", "Armed Robbery", 45, 5000, 0, 0],
+      ["P.C. 2011", "Section VIII - Property and Vehicle Related", "Accessory to Armed Robbery", 25, 2500, 0, 0],
+      ["P.C. 2012", "Section VIII - Property and Vehicle Related", "Attempted Armed Robbery", 35, 3500, 0, 0],
+      ["P.C. 2013", "Section VIII - Property and Vehicle Related", "Grand Larceny", 45, 7500, 0, 0],
+      ["P.C. 2014", "Section VIII - Property and Vehicle Related", "Leaving Without Paying", 0, 500, 0, 0],
+      ["P.C. 2015", "Section VIII - Property and Vehicle Related", "Possession of Nonlegal Currency", 10, 750, 0, 0],
+      ["P.C. 2016", "Section VIII - Property and Vehicle Related", "Possession of Government-Issued Items", 20, 2000, 0, 0],
+      ["P.C. 2017", "Section VIII - Property and Vehicle Related", "Possession of Items Used in the Commission of a Crime", 10, 750, 0, 0],
+      ["P.C. 2018", "Section VIII - Property and Vehicle Related", "Sale of Items Used in the Commission of a Crime", 20, 1500, 0, 0],
+      ["P.C. 2019", "Section VIII - Property and Vehicle Related", "Theft of an Aircraft", 45, 5000, 0, 0],
+      ["P.C. 3001", "Section VII - Justice Related", "Impersonating", 15, 1250, 0, 0],
+      ["P.C. 3002", "Section VII - Justice Related", "Impersonating a Peace Officer or Public Servant", 35, 3500, 0, 0],
+      ["P.C. 3003", "Section VII - Justice Related", "Impersonating a Judge", 40, 5000, 0, 0],
+      ["P.C. 3004", "Section VII - Justice Related", "Possession of Stolen Identification", 10, 1000, 0, 0],
+      ["P.C. 3005", "Section VII - Justice Related", "Possession of Stolen Government Identification", 25, 2500, 0, 0],
+      ["P.C. 3006", "Section VI - Federal Charges", "Extortion", 35, 3000, 0, 0],
+      ["P.C. 3007", "Section VI - Federal Charges", "Fraud", 20, 1500, 0, 0],
+      ["P.C. 3008", "Section VI - Federal Charges", "Forgery", 20, 1500, 0, 0],
+      ["P.C. 3009", "Section VI - Federal Charges", "Money Laundering", 50, 10000, 0, 0],
+      ["P.C. 4001", "Section VIII - Property and Vehicle Related", "Trespassing", 5, 300, 0, 0],
+      ["P.C. 4002", "Section VIII - Property and Vehicle Related", "Felony Trespassing", 15, 1500, 0, 0],
+      ["P.C. 4003", "Section VIII - Property and Vehicle Related", "Arson", 40, 5000, 0, 0],
+      ["P.C. 4004", "Section VIII - Property and Vehicle Related", "Vandalism", 0, 300, 0, 0],
+      ["P.C. 4005", "Section VIII - Property and Vehicle Related", "Vandalism of Government Property", 25, 2500, 0, 0],
+      ["P.C. 4006", "Section VIII - Property and Vehicle Related", "Littering", 0, 200, 0, 0],
+      ["P.C. 5001", "Section VI - Federal Charges", "Bribery of a Government Official", 40, 5000, 0, 0],
+      ["P.C. 5002", "Section VI - Federal Charges", "Anti-Mask Law", 0, 500, 0, 0],
+      ["P.C. 5003", "Section VI - Federal Charges", "Possession of Contraband in a Government Facility", 25, 2000, 0, 0],
+      ["P.C. 5004", "Section VI - Federal Charges", "Criminal Possession of Stolen Property", 10, 750, 0, 0],
+      ["P.C. 5005", "Section VI - Federal Charges", "Escaping", 20, 1000, 0, 0],
+      ["P.C. 5006", "Section VI - Federal Charges", "Jailbreak", 45, 5000, 0, 0],
+      ["P.C. 5007", "Section VI - Federal Charges", "Accessory to Jailbreak", 30, 3000, 0, 0],
+      ["P.C. 5008", "Section VI - Federal Charges", "Attempted Jailbreak", 35, 3500, 0, 0],
+      ["P.C. 5009", "Section VI - Federal Charges", "Perjury", 25, 2500, 0, 0],
+      ["P.C. 5010", "Section VI - Federal Charges", "Violation of a Restraining Order", 25, 2500, 0, 0],
+      ["P.C. 5011", "Section VI - Federal Charges", "Embezzlement", 50, 12000, 0, 0],
+      ["P.C. 5012", "Section VI - Federal Charges", "Unlawful Practice", 25, 2500, 0, 0],
+      ["P.C. 5013", "Section VI - Federal Charges", "Misuse of Emergency Systems", 0, 750, 0, 0],
+      ["P.C. 5014", "Section VI - Federal Charges", "Conspiracy", 15, 1000, 0, 0],
+      ["P.C. 5015", "Section VI - Federal Charges", "Violating a Court Order", 15, 1500, 0, 0],
+      ["P.C. 5016", "Section VI - Federal Charges", "Failure to Appear", 15, 1500, 0, 0],
+      ["P.C. 5017", "Section VI - Federal Charges", "Contempt of Court", 20, 2000, 0, 0],
+      ["P.C. 5018", "Section VII - Justice Related", "Resisting Arrest", 10, 500, 0, 0],
+      ["P.C. 6001", "Section VII - Justice Related", "Disobeying a Peace Officer", 0, 500, 0, 0],
+      ["P.C. 6002", "Section VII - Justice Related", "Disorderly Conduct", 0, 250, 0, 0],
+      ["P.C. 6003", "Section VII - Justice Related", "Disturbing the Peace", 0, 350, 0, 0],
+      ["P.C. 6004", "Section VII - Justice Related", "False Reporting", 10, 750, 0, 0],
+      ["P.C. 6005", "Section VII - Justice Related", "Harassment", 10, 750, 0, 0],
+      ["P.C. 6006", "Section VII - Justice Related", "Misdemeanor Obstruction of Justice", 10, 750, 0, 0],
+      ["P.C. 6007", "Section VII - Justice Related", "Felony Obstruction of Justice", 25, 2000, 0, 0],
+      ["P.C. 6008", "Section VII - Justice Related", "Inciting a Riot", 30, 2500, 0, 0],
+      ["P.C. 6009", "Section VII - Justice Related", "Loitering on Government Properties", 0, 300, 0, 0],
+      ["P.C. 6010", "Section VII - Justice Related", "Tampering", 15, 1000, 0, 0],
+      ["P.C. 6011", "Section VII - Justice Related", "Vehicle Tampering", 15, 1000, 0, 0],
+      ["P.C. 6012", "Section VII - Justice Related", "Evidence Tampering", 30, 2500, 0, 0],
+      ["P.C. 6013", "Section VII - Justice Related", "Witness Tampering", 40, 5000, 0, 0],
+      ["P.C. 6014", "Section VII - Justice Related", "Failure to Provide Identification", 5, 500, 0, 0],
+      ["P.C. 6015", "Section VII - Justice Related", "Vigilantism", 25, 2000, 0, 0],
+      ["P.C. 6016", "Section VII - Justice Related", "Unlawful Assembly", 10, 750, 0, 0],
+      ["P.C. 6017", "Section VII - Justice Related", "Government Corruption", 60, 15000, 0, 0],
+      ["P.C. 6018", "Section VII - Justice Related", "Stalking", 30, 2500, 0, 0],
+      ["P.C. 6019", "Section VII - Justice Related", "Aiding and Abetting", 15, 1000, 0, 0],
+      ["P.C. 6020", "Section VII - Justice Related", "Harboring a Fugitive", 20, 2000, 0, 0],
+      ["P.C. 7001", "Section V - Controlled Substances", "Misdemeanor Possession of Marijuana", 5, 250, 0, 0],
+      ["P.C. 7002", "Section V - Controlled Substances", "Felony manufacturing of Marijuana", 25, 2500, 0, 0],
+      ["P.C. 7003", "Section V - Controlled Substances", "Cultivation of Marijuana A", 10, 750, 0, 0],
+      ["P.C. 7004", "Section V - Controlled Substances", "Cultivation of Marijuana B", 25, 2000, 0, 0],
+      ["P.C. 7005", "Section V - Controlled Substances", "Possession of Marijuana with Intent to Distribute", 30, 3000, 0, 0],
+      ["P.C. 7006", "Section V - Controlled Substances", "Misdemeanor Possession of Cocaine", 10, 750, 0, 0],
+      ["P.C. 7007", "Section V - Controlled Substances", "Felony manufacturing Possession of Cocaine", 30, 3000, 0, 0],
+      ["P.C. 7008", "Section V - Controlled Substances", "Possession of Cocaine with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7009", "Section V - Controlled Substances", "Misdemeanor Possession of Methamphetamine", 10, 750, 0, 0],
+      ["P.C. 7010", "Section V - Controlled Substances", "Felony manufacturing Possession of Methamphetamine", 30, 3000, 0, 0],
+      ["P.C. 7011", "Section V - Controlled Substances", "Possession of Methamphetamine with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7012", "Section V - Controlled Substances", "Misdemeanor Possession of Oxy / Vicodin", 10, 750, 0, 0],
+      ["P.C. 7013", "Section V - Controlled Substances", "Felony manufacturing Possession of Oxy / Vicodin", 25, 2500, 0, 0],
+      ["P.C. 7014", "Section V - Controlled Substances", "Felony Possession of Oxy / Vicodin with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7015", "Section V - Controlled Substances", "Misdemeanor Possession of Ecstasy", 10, 750, 0, 0],
+      ["P.C. 7016", "Section V - Controlled Substances", "Felony manufacturing Possession of Ecstasy", 25, 2500, 0, 0],
+      ["P.C. 7017", "Section V - Controlled Substances", "Possession of Ecstasy with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7018", "Section V - Controlled Substances", "Misdemeanor Possession of Opium", 10, 750, 0, 0],
+      ["P.C. 7019", "Section V - Controlled Substances", "Felony manufacturing Possession of Opium", 25, 2500, 0, 0],
+      ["P.C. 7020", "Section V - Controlled Substances", "Possession of Opium with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7021", "Section V - Controlled Substances", "Misdemeanor Possession of Adderall", 10, 750, 0, 0],
+      ["P.C. 7022", "Section V - Controlled Substances", "Felony manufacturing Possession of Adderall", 25, 2500, 0, 0],
+      ["P.C. 7023", "Section V - Controlled Substances", "Possession of Adderall with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7024", "Section V - Controlled Substances", "Misdemeanor Possession of Xanax", 10, 750, 0, 0],
+      ["P.C. 7025", "Section V - Controlled Substances", "Felony manufacturing Possession of Xanax", 25, 2500, 0, 0],
+      ["P.C. 7026", "Section V - Controlled Substances", "Possession of Xanax with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7027", "Section V - Controlled Substances", "Misdemeanor Possession of Shrooms", 10, 750, 0, 0],
+      ["P.C. 7028", "Section V - Controlled Substances", "Felony manufacturing Possession of Shrooms", 25, 2500, 0, 0],
+      ["P.C. 7029", "Section V - Controlled Substances", "Possession of Shrooms with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7030", "Section V - Controlled Substances", "Misdemeanor Possession of Lean", 10, 750, 0, 0],
+      ["P.C. 7031", "Section V - Controlled Substances", "Felony manufacturing Possession of Lean", 25, 2500, 0, 0],
+      ["P.C. 7032", "Section V - Controlled Substances", "Possession of Lean with Intent to Distribute", 35, 4500, 0, 0],
+      ["P.C. 7033", "Section V - Controlled Substances", "Sale of a controlled substance", 15, 1500, 0, 0],
+      ["P.C. 7034", "Section V - Controlled Substances", "Drug Trafficking", 50, 10000, 0, 0],
+      ["P.C. 7035", "Section VI - Federal Charges", "Desecration of a Human Corpse", 40, 5000, 0, 0],
+      ["P.C. 7036", "Article IV - Infractions and Ordinances", "Public Intoxication", 0, 300, 0, 0],
+      ["P.C. 7037", "Article IV - Infractions and Ordinances", "Public Indecency", 5, 750, 0, 0],
+      ["P.C. 8001", "Section IV - Firearms, Weapons, Explosives", "Criminal Possession of Weapon Class A", 15, 1000, 0, 0],
+      ["P.C. 8002", "Section IV - Firearms, Weapons, Explosives", "Criminal Possession of Weapon Class B", 25, 2000, 0, 0],
+      ["P.C. 8003", "Section IV - Firearms, Weapons, Explosives", "Criminal Possession of Weapon Class C", 40, 5000, 0, 0],
+      ["P.C. 8004", "Section IV - Firearms, Weapons, Explosives", "Criminal Possession of Weapon Class D", 35, 3500, 0, 0],
+      ["P.C. 8005", "Section IV - Firearms, Weapons, Explosives", "Criminal Sale of Weapon Class A", 25, 2500, 0, 0],
+      ["P.C. 8006", "Section IV - Firearms, Weapons, Explosives", "Criminal Sale of Weapon Class B", 35, 4000, 0, 0],
+      ["P.C. 8007", "Section IV - Firearms, Weapons, Explosives", "Criminal Sale of Weapon Class C", 50, 8000, 0, 0],
+      ["P.C. 8008", "Section IV - Firearms, Weapons, Explosives", "Criminal Sale of Weapon Class D", 45, 6000, 0, 0],
+      ["P.C. 8009", "Section IV - Firearms, Weapons, Explosives", "Criminal Use of Weapon", 20, 1500, 0, 0],
+      ["P.C. 8010", "Section IV - Firearms, Weapons, Explosives", "Possession of Illegal Firearm Modifications", 15, 1000, 0, 0],
+      ["P.C. 8011", "Section IV - Firearms, Weapons, Explosives", "Weapon Trafficking", 65, 12000, 0, 0],
+      ["P.C. 8012", "Section IV - Firearms, Weapons, Explosives", "Brandishing a Weapon", 10, 750, 0, 0],
+      ["P.C. 8013", "Section IV - Firearms, Weapons, Explosives", "Insurrection", 150, 30000, 0, 0],
+      ["P.C. 8014", "Section IV - Firearms, Weapons, Explosives", "Flying into Restricted Airspace", 30, 3000, 0, 0],
+      ["P.C. 8015", "Article IV - Infractions and Ordinances", "Jaywalking", 0, 150, 0, 0],
+      ["P.C. 8016", "Section IV - Firearms, Weapons, Explosives", "Criminal Use of Explosives", 50, 7500, 0, 0],
+      ["P.C. 9001", "Section IX - Traffic Offenses", "Driving While Intoxicated", 10, 750, 0, 0],
+      ["P.C. 9002", "Section IX - Traffic Offenses", "Evading", 10, 750, 0, 0],
+      ["P.C. 9003", "Section IX - Traffic Offenses", "Reckless Evading", 25, 2000, 0, 0],
+      ["P.C. 9004", "Section IX - Traffic Offenses", "Failure to Yield to Emergency Vehicle", 0, 500, 0, 0],
+      ["P.C. 9005", "Section IX - Traffic Offenses", "Failure to Obey Traffic Control Device", 0, 150, 0, 0],
+      ["P.C. 9006", "Section IX - Traffic Offenses", "Nonfunctional Vehicle", 0, 75, 0, 0],
+      ["P.C. 9007", "Section IX - Traffic Offenses", "Negligent Driving", 0, 300, 0, 0],
+      ["P.C. 9008", "Section IX - Traffic Offenses", "Reckless Driving", 10, 750, 0, 0],
+      ["P.C. 9009", "Section IX - Traffic Offenses", "Third Degree Speeding", 0, 225, 0, 0],
+      ["P.C. 9010", "Section IX - Traffic Offenses", "Second Degree Speeding", 0, 450, 0, 0],
+      ["P.C. 9011", "Section IX - Traffic Offenses", "First Degree Speeding", 0, 750, 0, 0],
+      ["P.C. 9012", "Section IX - Traffic Offenses", "Unlicensed Operation of Vehicle", 5, 500, 0, 0],
+      ["P.C. 9013", "Section IX - Traffic Offenses", "Illegal U-Turn", 0, 75, 0, 0],
+      ["P.C. 9014", "Section IX - Traffic Offenses", "Illegal Passing", 0, 300, 0, 0],
+      ["P.C. 9015", "Section IX - Traffic Offenses", "Failure to Maintain Lane", 0, 300, 0, 0],
+      ["P.C. 9016", "Section IX - Traffic Offenses", "Illegal Turn", 0, 150, 0, 0],
+      ["P.C. 9017", "Section IX - Traffic Offenses", "Failure to Stop", 0, 600, 0, 0],
+      ["P.C. 9018", "Section IX - Traffic Offenses", "Unauthorized Parking", 0, 300, 0, 0],
+      ["P.C. 9019", "Section IX - Traffic Offenses", "Hit and Run", 20, 1500, 0, 0],
+      ["P.C. 9020", "Section IX - Traffic Offenses", "Driving without Headlights or Signals", 0, 300, 0, 0],
+      ["P.C. 9021", "Section IX - Traffic Offenses", "Street Racing", 20, 2000, 0, 0],
+      ["P.C. 9022", "Section IX - Traffic Offenses", "Piloting without Proper Licensing", 20, 1500, 0, 0],
+      ["P.C. 9023", "Section IX - Traffic Offenses", "Unlawful Use of a Motor Vehicle", 10, 750, 0, 0],
+      ["P.C. 10001", "Article IV - Infractions and Ordinances", "Hunting in Restricted Areas", 0, 450, 0, 0],
+      ["P.C. 10002", "Article IV - Infractions and Ordinances", "Unlicensed Hunting", 0, 450, 0, 0],
+      ["P.C. 10003", "Article IV - Infractions and Ordinances", "Animal Cruelty", 15, 1000, 0, 0],
+      ["P.C. 10004", "Article IV - Infractions and Ordinances", "Hunting with a Non-Hunting Weapon", 10, 750, 0, 0],
+      ["P.C. 10005", "Article IV - Infractions and Ordinances", "Hunting outside of hunting hours", 0, 750, 0, 0],
+      ["P.C. 10006", "Article IV - Infractions and Ordinances", "Overhunting", 10, 1000, 0, 0],
+      ["P.C. 10007", "Article IV - Infractions and Ordinances", "Poaching", 25, 2500, 0, 0]
+
     ];
     const CODE_DETAILS = {
 
-        // ---------------- HOMICIDE ----------------
-        "1b": {description:"Attempt to intentionally kill with premeditation.",applies:"Use when suspect plans and attempts to kill but fails."},
-        "1d": {description:"Attempt to kill without premeditation.",applies:"Use when suspect attempts to kill in the moment."},
-
-        // ---------------- MANSLAUGHTER ----------------
-        "2a": {description:"Killing in the heat of passion.",applies:"Use when suspect causes death without prior planning."},
-        "2b": {description:"Unintentional killing due to negligence.",applies:"Use when death results from careless actions."},
-        "2c": {description:"Killing someone using a vehicle.",applies:"Use when a vehicle causes death."},
-
-        // ---------------- VIOLENT ----------------
-        "3a": {description:"Threat of harm with ability to act.",applies:"Use when suspect threatens violence."},
-        "3b": {description:"Physical harmful contact.",applies:"Use when suspect strikes another."},
-        "3c": {description:"Assault using a weapon.",applies:"Use when a weapon is involved in assault."},
-        "3d": {description:"Extreme physical harm or mutilation.",applies:"Use when severe torture is inflicted."},
-        "3e": {description:"Illegal removal of organs.",applies:"Use in RP involving organ harvesting."},
-        "3f": {description:"Taking property by force.",applies:"Use for muggings or direct robberies."},
-        "3g": {description:"Unlawful detainment of a person.",applies:"Use when someone is kidnapped."},
-        "3h": {description:"Holding someone to force demands.",applies:"Use when hostage is used."},
-        "3i": {description:"Theft of services without payment.",applies:"Use for unpaid services."},
-        "3j": {description:"Holding someone against will.",applies:"Use for unlawful detainment."},
-        "3k": {description:"Actions that endanger others.",applies:"Use when reckless danger is created."},
-        "3l": {description:"Robbery targeting jewelry stores.",applies:"Use for jewelry store heists."},
-        "3m": {description:"Theft of fine art.",applies:"Use for museum/gallery robberies."},
-        "3n": {description:"Robbery of secured vaults.",applies:"Use for high-tier vault robberies."},
-        "3o": {description:"Using vehicle to harm.",applies:"Use when vehicle is used as weapon."},
-
-        // ---------------- WEAPONS ----------------
-        "4a": {description:"Selling weapons illegally.",applies:"Use for illegal weapon sales."},
-        "4d": {description:"Large scale weapon trafficking.",applies:"Use for organized distribution."},
-        "4e": {description:"Illegal handgun possession.",applies:"Use when suspect has Class 1 weapon."},
-        "4f": {description:"Illegal rifle/SMG possession.",applies:"Use for Class 2 weapons."},
-        "4g": {description:"Possession of explosives.",applies:"Use when bombs/molotovs found."},
-        "4h": {description:"Illegal taser possession.",applies:"Use for unauthorized tasers."},
-        "4i": {description:"Threatening display of firearm.",applies:"Use when weapon is brandished."},
-        "4j": {description:"Firing weapon unlawfully.",applies:"Use when shots fired illegally."},
-        "4k": {description:"Illegal weapon possession.",applies:"Use for banned weapons."},
-        "4l": {description:"Illegal ammunition possession.",applies:"Use when ammo is unlawful."},
-        "4m": {description:"Illegal weapon parts possession.",applies:"Use for components."},
-        "4n": {description:"Producing firearms illegally.",applies:"Use for crafting guns."},
-        "4o": {description:"Producing explosives.",applies:"Use for bomb manufacturing."},
-        "4p": {description:"Possessing explosive materials.",applies:"Use for bomb components."},
-        "4q": {description:"Illegal heavy weapon possession.",applies:"Use for Class 3 weapons."},
-
-        // ---------------- DRUGS ----------------
-        "5a": {description:"Growing illegal drugs.",applies:"Use for drug farms."},
-        "5b": {description:"Manufacturing drugs.",applies:"Use for drug labs."},
-        "5c": {description:"Possession with intent to sell.",applies:"Use for distribution intent."},
-        "5d": {description:"Higher tier distribution intent.",applies:"Use for large amounts."},
-        "5e": {description:"Selling drugs.",applies:"Use for active dealing."},
-        "5f": {description:"Selling high-class drugs.",applies:"Use for advanced dealing."},
-        "5g": {description:"Street-level dealing.",applies:"Use for small deals."},
-        "5h": {description:"Possession of marijuana.",applies:"Use for weed possession."},
-
-        // ---------------- FEDERAL ----------------
-        "6c": {description:"Threatening mass harm.",applies:"Use for terror threats."},
-        "6e": {description:"Offering/accepting bribes.",applies:"Use for corruption."},
-        "6f": {description:"Stealing entrusted funds.",applies:"Use for embezzlement."},
-        "6g": {description:"Forcing payment through threats.",applies:"Use for extortion."},
-        "6h": {description:"Pretending to be an official.",applies:"Use for impersonation."},
-        "6i": {description:"Cleaning illegal money.",applies:"Use for laundering."},
-        "6j": {description:"Bank robbery.",applies:"Use for bank heists."},
-        "6k": {description:"Practicing medicine illegally.",applies:"Use without license."},
-        "6l": {description:"Deception for gain.",applies:"Use for scams."},
-        "6m": {description:"Possession of human remains.",applies:"Use for corpse possession."},
-        "6n": {description:"Mishandling human remains.",applies:"Use for desecration."},
-        "6o": {description:"Illegal occupation of property.",applies:"Use for squatting."},
-        "6q": {description:"False bomb threat.",applies:"Use for threats."},
-        "6r": {description:"Stealing identity.",applies:"Use for identity theft."},
-        "6s": {description:"Grave desecration.",applies:"Use for cemetery crimes."},
-        "6t": {description:"High security robbery.",applies:"Use for reserve robbery."},
-
-        // ---------------- JUSTICE ----------------
-        "7e": {description:"Interfering with justice.",applies:"Use when blocking police."},
-        "7f": {description:"Evading police in vehicle.",applies:"Use for pursuits."},
-        "7g": {description:"Ignoring lawful commands.",applies:"Use when refusing orders."},
-        "7h": {description:"Fleeing on foot.",applies:"Use for running."},
-        "7i": {description:"Resisting arrest.",applies:"Use when fighting arrest."},
-        "7j": {description:"Refusing ID.",applies:"Use when not identifying."},
-        "7k": {description:"Filing false reports.",applies:"Use when lying to police."},
-        "7l": {description:"Escaping custody.",applies:"Use when fleeing jail."},
-        "7n": {description:"Using fake identity.",applies:"Use for fake ID."},
-        "7o": {description:"Making threats.",applies:"Use for verbal threats."},
-        "7p": {description:"Breaking restraining order.",applies:"Use when violating court order."},
-        "7q": {description:"Having stolen ID.",applies:"Use for stolen identity."},
-        "7r": {description:"Wasting resources.",applies:"Use for misuse of services."},
-        "7s": {description:"Tampering with witnesses.",applies:"Use for intimidation."},
-
-        // ---------------- PROPERTY ----------------
-        "8a": {description:"Possession of stolen goods.",applies:"Use when holding stolen items."},
-        "8b": {description:"Driving stolen vehicle temporarily.",applies:"Use for joyriding."},
-        "8c": {description:"Vehicle theft.",applies:"Use for GTA."},
-        "8d": {description:"Taking vehicle by force.",applies:"Use for hijacking."},
-        "8e": {description:"Major theft.",applies:"Use for high-value theft."},
-        "8f": {description:"Minor theft.",applies:"Use for small theft."},
-        "8g": {description:"Damaging property.",applies:"Use for vandalism."},
-        "8h": {description:"Destroying property.",applies:"Use for severe damage."},
-        "8i": {description:"Starting fires illegally.",applies:"Use for arson."},
-        "8j": {description:"Tampering with systems.",applies:"Use for hacking."},
-        "8k": {description:"Robbing ATMs.",applies:"Use for ATM hits."},
-        "8l": {description:"Breaking into buildings.",applies:"Use for burglary."},
-
-        // ---------------- TRAFFIC ----------------
-        "9a": {description:"Exceeding speed limit.",applies:"Use for speeding."},
-        "9b": {description:"Dangerous driving.",applies:"Use for reckless driving."},
-        "9c": {description:"Street racing.",applies:"Use for racing."},
-        "9d": {description:"Driving without license.",applies:"Use when unlicensed."},
-        "9e": {description:"Lane violations.",applies:"Use when swerving."},
-        "9f": {description:"Running red lights.",applies:"Use at intersections."},
-        "9g": {description:"Illegal U-turn.",applies:"Use for improper turns."},
-        "9h": {description:"Evading police.",applies:"Use when fleeing."},
-        "9i": {description:"Leaving accident scene.",applies:"Use for hit and run."},
-        "9j": {description:"Driving under influence.",applies:"Use for DUI."}
-
+        
+        "P.C. 1001": {description: "When a person intentionally or knowingly causes physical contact with another (without a weapon).", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 1002": {description: "If a person intentionally or knowingly causes injury to another (without a weapon).", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 1003": {description: "When a person unintentionally, and recklessly causes bodily injury to another as a result of a confrontation AND causes bodily injury.", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 1004": {description: "When a person intentionally, knowingly, or recklessly causes bodily injury to another person AND either causes serious bodily injury or uses or exhibits a deadly weapon.", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 1005": {description: "When a person unintentionally and recklessly causes the death of another.", applies: "Use when the suspect's actions result in death or show clear intent to cause death."},
+        "P.C. 1006": {description: "When a person unintentionally and recklessly causes the death of another with a vehicle.", applies: "Use when the suspect's actions result in death or show clear intent to cause death."},
+        "P.C. 1007": {description: "When a non-government person intentionally attacks another with the intent to kill.", applies: "Use when the suspect tried to commit murder of a civilian but the act was not completed."},
+        "P.C. 1008": {description: "Any intentional killing that is not premeditated or planned. A situation in which the killer intends only to inflict serious bodily harm.", applies: "Use when the suspect's actions result in death or show clear intent to cause death."},
+        "P.C. 1009": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during second degree murder."},
+        "P.C. 1010": {description: "Any intentional killing that is willful and premeditated with malice.", applies: "Use when the suspect's actions result in death or show clear intent to cause death."},
+        "P.C. 1011": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during first degree murder."},
+        "P.C. 1012": {description: "Any intentional killing that is done to a government employee.", applies: "Use when the suspect's actions result in death or show clear intent to cause death."},
+        "P.C. 1013": {description: "Any attacks that are done to a government employee with the intent to cause death.", applies: "Use when the suspect tried to commit murder of a public servant or peace officer but the act was not completed."},
+        "P.C. 1014": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during the murder of a public servant or peace officer."},
+        "P.C. 1015": {description: "The act of taking another against their will and holding them for an extended period of time.", applies: "Use when the suspect unlawfully holds, moves, restrains, or uses another person against their will."},
+        "P.C. 1016": {description: "The act of taking another against their will for a short period of time.", applies: "Use when the suspect unlawfully holds, moves, restrains, or uses another person against their will."},
+        "P.C. 1017": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during kidnapping."},
+        "P.C. 1018": {description: "The act of trying to take someone against their will.", applies: "Use when the suspect tried to commit kidnapping but the act was not completed."},
+        "P.C. 1019": {description: "The act of taking another against their will for personal gain.", applies: "Use when the suspect unlawfully holds, moves, restrains, or uses another person against their will."},
+        "P.C. 1020": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during hostage taking."},
+        "P.C. 1021": {description: "The act of taking a government employee against their will for an extended period of time.", applies: "Use when the suspect unlawfully holds, moves, restrains, or uses another person against their will."},
+        "P.C. 1022": {description: "The act of stating the intent to commit a crime against another.", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 1023": {description: "The act of disregarding safety of another which may place another in danger of death or bodily injury.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 1024": {description: "The act in which a firearm is discharged in relation to gang activity.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 1025": {description: "The act in which a persons consumes the flesh of another willingly.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 1026": {description: "The act of causing harm to another to extract information and or for self enjoyment.", applies: "Use when the suspect threatens, harms, injures, or places another person in immediate danger."},
+        "P.C. 2001": {description: "The theft of property below $50 amount.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2002": {description: "Theft of property above $700.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2003": {description: "The act of stealing a vehicle that belongs to someone else without permission.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2004": {description: "The act of stealing a vehicle that belongs to someone else without permission while armed.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2005": {description: "The act of someone forcefully taking a vehicle from its occupants.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2006": {description: "The act of entering into a building illegally with intent to commit a crime, especially theft.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2007": {description: "The action of taking property unlawfully from a person or place by force or threat of force.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2008": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during robbery."},
+        "P.C. 2009": {description: "The action of attempting property unlawfully from a person or place by force or threat of force.", applies: "Use when the suspect tried to commit robbery but the act was not completed."},
+        "P.C. 2010": {description: "The action of taking property unlawfully from a person or place by force or threat of force while armed.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2011": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during armed robbery."},
+        "P.C. 2012": {description: "The action of attempting property unlawfully from a person or place by force or threat of force while armed.", applies: "Use when the suspect tried to commit armed robbery but the act was not completed."},
+        "P.C. 2013": {description: "Theft of personal property having a value above a legally specified amount.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 2014": {description: "The act of leaving an establishment without paying for provided service.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 2015": {description: "Being in possession of stolen currency.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 2016": {description: "Being in possession of Items only acquirable by government employees.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 2017": {description: "Being in possession of Items that were previously used to commit crimes.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 2018": {description: "The act of selling items that were previously used to commit crimes.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 2019": {description: "The act of stealing an aircraft.", applies: "Use when the suspect unlawfully takes, attempts to take, or enters property with intent to steal."},
+        "P.C. 3001": {description: "The action of falsely identifying as another person to deceive.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 3002": {description: "The action of falsely identifying as a government employee to deceive.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 3003": {description: "The action of falsely identifying as a Judge to deceive.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 3004": {description: "To have another persons Identification without consent.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 3005": {description: "To have the identification of a government employee without consent.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 3006": {description: "To threaten or cause harm to a person or property for financial gain.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 3007": {description: "To deceive another for financial gain.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 3008": {description: "To falsify legal documentation for personal gain.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 3009": {description: "Processing stolen money for legal currency.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 4001": {description: "For a person to be within the bounds of a location of which they are not legally allowed.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 4002": {description: "For a person to have repeatedly entered the bounds of a location of which they are knowingly not legally allowed.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 4003": {description: "The use if fire and accelerants to will and maliciously destroy, harm or cause death to a person or property.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 4004": {description: "The willful destruction of property.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 4005": {description: "The willful destruction of government property.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 4006": {description: "The willful discard of refuse into to open and not in designated bin.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5001": {description: "the use of money, favors and or property to gain favor with a government official.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 5002": {description: "Wearing a mask in a prohibited zone.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5003": {description: "Being in possession of items that are illegal while within a government building.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 5004": {description: "Being in possession of items stolen knowingly or not.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 5005": {description: "The action of willful and knowingly leaving custody while legally being arrest, detained or in jail.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5006": {description: "The action of leaving state custody from a state or county detention facility.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5007": {description: "Being present and or participating in the act of parent charge.", applies: "Use when the suspect assisted, participated in, or was knowingly present during jailbreak."},
+        "P.C. 5008": {description: "The willful and intentional attempted escape from a state or county detention facility.", applies: "Use when the suspect tried to commit jailbreak but the act was not completed."},
+        "P.C. 5009": {description: "The action of stating falsities while legally bound to speak the truth.", applies: "Use when the suspect violates a court order, court process, or lawful judicial requirement."},
+        "P.C. 5010": {description: "The willful and knowing infringement upon court ordered protective documentation.", applies: "Use when the suspect violates a court order, court process, or lawful judicial requirement."},
+        "P.C. 5011": {description: "The willful and knowingly movement of funds from non personal bank accounts to personal bank accounts for personal gain.", applies: "Use when the suspect uses deception, threats, or illegal financial activity for personal or financial gain."},
+        "P.C. 5012": {description: "The action of performing a service without proper legal licensing and approval.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5013": {description: "Use of government emergency equipment for its non-intended purpose.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5014": {description: "The act of planning a crime but not yet committing the crime.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 5015": {description: "The infringement of court ordered documentation.", applies: "Use when the suspect violates a court order, court process, or lawful judicial requirement."},
+        "P.C. 5016": {description: "When someone who is legally bound to appear in court does not do so.", applies: "Use when the suspect violates a court order, court process, or lawful judicial requirement."},
+        "P.C. 5017": {description: "The disruption of court proceedings in a courtroom while it is in session (judicial decision).", applies: "Use when the suspect violates a court order, court process, or lawful judicial requirement."},
+        "P.C. 5018": {description: "The act of not allowing peace officers to take you into custody willingly.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6001": {description: "The willful disregard of a lawful order.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6002": {description: "Acting in a manner that creates a hazardous or physically offensive condition by any act which serves no legitimate purpose of the actor.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6003": {description: "Action in a manner that causes unrest and disrupts public order.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6004": {description: "The act of reporting a crime that did not happen.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6005": {description: "The repeated disruption or verbal attacks of another person.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6006": {description: "Acting in a way that hinders the process of Justice or lawful investigations.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6007": {description: "Acting in a way that hinders the process of Justice or lawful investigations while using violence.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6008": {description: "Causing civil unrest in a manner to incite a group to cause harm to people or property.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6009": {description: "When someone is present in a government property for an extended period of time.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6010": {description: "When someone willfully, knowingly and indirectly interfering with key points of a lawful investigation.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6011": {description: "The willful and knowing interference the normal function of a vehicle.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 6012": {description: "The willful and knowing interference with evidence from a lawful investigation.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6013": {description: "The willful and knowing coaching or coercing of a witness in a lawful investigation.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6014": {description: "The act of not presenting identification when lawfully required to do so.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6015": {description: "The act of engaging in enforcing the law with legal authority to do so.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6016": {description: "when a large group gathers in a location that requires prior approval to do so.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6017": {description: "The act of using political position and power for self gain.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6018": {description: "When one person monitors another without their consent.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6019": {description: "To assist someone in committing or to encourage someone to commit a crime.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 6020": {description: "When someone willingly hides another who is wanted by the authorities.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 7001": {description: "The possession of a quantity of marijuana in the amount of less the 4 blunts.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7002": {description: "The possession of a quantity of marijuana that is from manufacturing.", applies: "Use when the suspect unlawfully possesses, manufactures, sells, or distributes a controlled substance."},
+        "P.C. 7003": {description: "The possession of 4 or less marijuana plants.", applies: "Use when the suspect unlawfully possesses, manufactures, sells, or distributes a controlled substance."},
+        "P.C. 7004": {description: "The possession of 5 or more marijuana plants.", applies: "Use when the suspect unlawfully possesses, manufactures, sells, or distributes a controlled substance."},
+        "P.C. 7005": {description: "The possession of a quantity of Marijuana for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7006": {description: "The possession of cocaine in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7007": {description: "The possession of a quantity of cocaine that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7008": {description: "The possession of a quantity of Cocaine for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7009": {description: "The possession of methamphetamine in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7010": {description: "The possession of a quantity of methamphetamine that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7011": {description: "The possession of a quantity of Methamphetamine for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7012": {description: "The possession of oxy / vicodin in a small quantity usually for personal use without prescription.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7013": {description: "The possession of a quantity of oxy / vicodin that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7014": {description: "The possession of a quantity of oxy / vicodin for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7015": {description: "The possession of ecstasy in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7016": {description: "The possession of a quantity of ecstasy that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7017": {description: "The possession of a quantity of ecstasy for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7018": {description: "The possession of opium in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7019": {description: "The possession of a quantity of opium that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7020": {description: "The possession of a quantity of Opium for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7021": {description: "The possession of adderall in a small quantity usually for personal use without prescription.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7022": {description: "The possession of a quantity of adderall that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7023": {description: "The possession of a quantity of Adderall for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7024": {description: "The possession of xanax in a small quantity usually for personal use without prescription.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7025": {description: "The possession of a quantity of xanax that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7026": {description: "The possession of a quantity of Xanax for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7027": {description: "The possession of shrooms in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7028": {description: "The possession of a quantity of shrooms that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7029": {description: "The possession of a quantity of Shrooms for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7030": {description: "The possession of lean in a small quantity usually for personal use.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7031": {description: "The possession of a quantity of lean that is from manufacturing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7032": {description: "The possession of a quantity of lean for distribution.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 7033": {description: "The sale of a substance that is controlled by law.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 7034": {description: "The large scale movement of illegal drugs.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 7035": {description: "When someone harms, disturbs or destroys the remains of another person.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 7036": {description: "When someone is intoxicated above legal limit in public.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 7037": {description: "The act of someone exposing themself in a way that infringes in public morals.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 8001": {description: "Possession of a Class A firearm without licensing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 8002": {description: "Possession of a Class B firearm without licensing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 8003": {description: "Possession of a Class C firearm without licensing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 8004": {description: "Possession of a Class D firearm without licensing.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 8005": {description: "The act of selling a Class A firearm without licensing.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 8006": {description: "The act of selling a Class B firearm without licensing.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 8007": {description: "The act of selling a Class C firearm without licensing.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 8008": {description: "The act of selling a Class D firearm without licensing.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 8009": {description: "Use of a weapon while in commission of a crime.", applies: "Use when the suspect unlawfully possesses, displays, uses, manufactures, or transfers a weapon or explosive."},
+        "P.C. 8010": {description: "Being in possession of firearm modifications unlawfully.", applies: "Use when the suspect is found carrying, storing, or controlling the listed illegal or restricted item."},
+        "P.C. 8011": {description: "The transportation of a large amount of weapons for one point to another.", applies: "Use when evidence shows the suspect sold, transferred, or intended to distribute the listed item or substance."},
+        "P.C. 8012": {description: "The act of making a firearm purposely visible.", applies: "Use when the suspect unlawfully possesses, displays, uses, manufactures, or transfers a weapon or explosive."},
+        "P.C. 8013": {description: "Attempting to overthrow the government with violence.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 8014": {description: "Piloting and aircraft into airspace that is governmentally controlled.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 8015": {description: "crossing a roadway in a manner that is hazardous to motor vehicles.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 8016": {description: "Use of explosives to committing a crime.", applies: "Use when the suspect unlawfully possesses, displays, uses, manufactures, or transfers a weapon or explosive."},
+        "P.C. 9001": {description: "Operating a motor vehicle while impaired by alcohol.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9002": {description: "Hiding or running from lawful detainment.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9003": {description: "Recklessly disregarding safety and Hiding or running from lawful detainment while.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9004": {description: "Not giving way to emergency vehicles.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9005": {description: "Not following the safety devices of the roadway.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9006": {description: "Having a vehicle that is no longer functional in the roadway.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9007": {description: "Driving in a manner as to unknowingly disregard safety.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9008": {description: "Driving in a manner as to knowingly disregard safety.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9009": {description: "Speeding 15 over the limit.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9010": {description: "Speeding 35 over the limit.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9011": {description: "Speeding 50 over the limit.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9012": {description: "The operation of a motor vehicle without proper licensing.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9013": {description: "Performing a u-turn where it is prohibited.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9014": {description: "Passing other motor vehicles in a prohibited manner.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9015": {description: "Not staying in the correct lane with a motor vehicle.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9016": {description: "Performing a turn where it is prohibited.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9017": {description: "Not stopping for a lawful stop or traffic device.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9018": {description: "Parking a vehicle in a location that requires approval with any.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9019": {description: "Striking another person or vehicle and fleeing the location.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9020": {description: "Operating a vehicle with no functional lights.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9021": {description: "Operating motor vehicles in a contest.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 9022": {description: "Failure to be in possession of valid licensing when operating an aircraft.", applies: "Use when the suspect's actions match the listed offense during an investigation or arrest."},
+        "P.C. 9023": {description: "The use of a motor vehicle without a lawful reason.", applies: "Use when the suspect commits this offense while operating or controlling a vehicle."},
+        "P.C. 10001": {description: "Harvesting game in areas where it is prohibited to do so.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
+        "P.C. 10002": {description: "Harvesting game without proper licensing.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
+        "P.C. 10003": {description: "The act of abusing an animal knowingly or not.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
+        "P.C. 10004": {description: "To use a weapon not lawfully stated or manufactured to be used for the harvesting of wild game.", applies: "Use when the suspect unlawfully possesses, displays, uses, manufactures, or transfers a weapon or explosive."},
+        "P.C. 10005": {description: "Harvesting animals outside of specified time to do so.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
+        "P.C. 10006": {description: "Taking more than legally specified amount of game.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
+        "P.C. 10007": {description: "Harvesting an animal that is listed as legally non-harvestable.", applies: "Use when the suspect violates hunting, wildlife, or animal protection laws."},
     };
     const CODES = RAW_CODES.map(x => ({
       code: x[0],
